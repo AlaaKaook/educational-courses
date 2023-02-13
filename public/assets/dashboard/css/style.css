@@ -4,7 +4,7 @@
     Name                 : FILLOW
     Author               : DexignZone
     Author Portfolio     : https://themeforest.net/user/dexignzone/portfolio
-    
+
 
 
     Table of Sass Contents
@@ -16,7 +16,7 @@
         _mixin
         _variable
 
-    2. bootstrap 
+    2. bootstrap
         -Here goes all official bootstrap scss files
 
     3. Global/Base
@@ -1463,8 +1463,9 @@ progress {
     width: 25%; }
 
   .col-xl-4 {
+    margin-left: 265px;
     flex: 0 0 auto;
-    width: 33.3333333333%; }
+    width: 45.3333333333%; }
 
   .col-xl-5 {
     flex: 0 0 auto;
@@ -9736,7 +9737,7 @@ svg.pulse-svg {
   		@include respond('laptop') {
   			height:3rem;
   		}
-  		
+
   	}
   	.input-group-text{
   		border-top-right-radius: 2.625rem;
@@ -9744,8 +9745,8 @@ svg.pulse-svg {
   		background:#F1F1F1;
   		a{
   			i{
-  				font-size:1.5rem;	
-  			}	
+  				font-size:1.5rem;
+  			}
   		}
   		@include respond('laptop') {
   			height:3rem;
@@ -15110,7 +15111,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_2"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_2"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -15229,7 +15230,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_3"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_3"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -15348,7 +15349,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_4"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_4"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -15467,7 +15468,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_5"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_5"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -15586,7 +15587,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_6"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_6"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -15705,7 +15706,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_7"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_7"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -15824,7 +15825,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_8"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_8"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -15943,7 +15944,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_9"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_9"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -16062,7 +16063,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_10"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_10"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -16181,7 +16182,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_11"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_11"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -16300,7 +16301,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_12"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_12"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -16419,7 +16420,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_13"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_13"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -16538,7 +16539,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_14"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_14"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -16657,7 +16658,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   	.dlabnav .metismenu > li.mm-active > a,
   	.dlabnav .metismenu > li:hover > a{
   			background:transparent;
-  	}	
+  	}
   } */ }
   [data-sibebarbg="color_15"][data-theme-version="dark"] .menu-toggle .dlabnav .metismenu li > ul,
   [data-sibebarbg="color_15"] .menu-toggle .dlabnav .metismenu li > ul {
@@ -19655,6 +19656,30 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     color: #000; }
     .form-control.solid[type="file"] {
       padding: 6px 10px; }
+
+      .form-control2 {
+        background: #fff;
+        border: 0.0625rem solid #f5f5f5;
+        padding: 0.3125rem 1.25rem;
+        color: #6e6e6e;
+        height: 3.5rem;
+        border-radius: 1rem; }
+        @media only screen and (max-width: 87.5rem) {
+          .form-control2 {
+            height: 8rem; } }
+        .form-control2:hover, .form-control:focus, .form-control.active {
+          box-shadow: none;
+          background: #fff;
+          color: #6e6e6e; }
+        .form-control2:focus {
+          border-color: var(--primary); }
+        .form-control2.solid {
+          background: #F8F8F8;
+          border-color: #ececec;
+          color: #000; }
+          .form-control2.solid[type="file"] {
+            padding: 6px 10px; }
+
 
 .input-rounded {
   border-radius: 6.25rem; }
@@ -24724,7 +24749,8 @@ code {
     [data-theme-version="dark"] .table tbody tr td {
       /*   border-color: $d-border; */ }
   .table:not(.table-bordered) thead th {
-    border-top: none; }
+    border-top: none;
+    text-align: center; }
   .table .thead-primary th {
     background-color: var(--primary);
     color: #fff; }
@@ -29152,5 +29178,12 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
     background-color: transparent; }
     [data-theme-version="dark"] .footer .copyright p {
       color: #fff; }
+
+
+      .md-change{
+        /* margin-right: 50px; */
+        margin-top: 5px;
+        text-align: center;
+      }
 
 /*# sourceMappingURL=style.css.map */

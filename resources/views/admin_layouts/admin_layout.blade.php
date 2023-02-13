@@ -26,6 +26,16 @@
     <!-- Style css -->
     <link href="{{ asset('assets/dashboard/css/style.css') }}" rel="stylesheet">
 
+
+    <!-- Pick date -->
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/vendor/pickadate/themes/default.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/vendor/pickadate/themes/default.date.css') }}">
+    <link href="../icon.css?family=Material+Icons" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{{ asset('assets/dashboard/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/dashboard/css/style.css') }}" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -132,6 +142,23 @@
             }, 1000);
         });
     </script>
+
+
+    <!-- pickdate -->
+    <script src="{{ asset('assets/dashboard/vendor/pickadate/picker.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/vendor/pickadate/picker.time.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/vendor/pickadate/picker.date.js') }}"></script>
+
+     <!-- Pickdate -->
+     <script src="{{ asset('assets/dashboard/js/plugins-init/pickadate-init.js') }}"></script>
+
+     <script src="{{ asset('assets/dashboard/vendor/jquery-nice-select/js/jquery.nice-select.min.js') }}"></script>
+
+     <script src="{{ asset('assets/dashboard/js/custom.min.js') }}"></script>
+     <script src="{{ asset('assets/dashboard/js/dlabnav-init.js') }}"></script>
+     <script src="{{ asset('assets/dashboard/js/demo.js') }}"></script>
+     <script src="{{ asset('assets/dashboard/js/styleSwitcher.js') }}"></script>
+
 
 </body>
 
