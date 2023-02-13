@@ -1,5 +1,7 @@
 @extends('admin_layouts.admin_layout')
 
+@section('title', ' Create Student')
+
 @section('content')
     <div class="content-body">
         <div class="container-fluid">

@@ -1,12 +1,14 @@
 @extends('admin_layouts.admin_layout')
 
+@section('title', ' All Students')
+
 @section('content')
     <div class="content-body">
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active"><a href="{{ route('students.index') }}">Students</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">All Student</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">All Students</a></li>
                 </ol>
             </div>
             <!-- row -->
