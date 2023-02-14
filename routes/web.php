@@ -3,6 +3,7 @@
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\StudentController as AdminStudentController;
+use App\Http\Controllers\Admin\TeacherController as AdminTeacherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,8 @@ Route::get('home/front', [FrontendController::class , 'index'])->name('home.fron
 Route::get('dashboard', [AdminDashboardController::class , 'index'])->name('dashboard');
 
 Route::resource('students', AdminStudentController::class);
+
+Route::resource('teachers', AdminTeacherController::class);
 
 // Route::put('students/{student}/{user}', [AdminStudentController::class , 'update'])->name('students.update');
 

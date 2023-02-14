@@ -1,14 +1,14 @@
 @extends('admin_layouts.admin_layout')
 
-@section('title', ' Create Student')
+@section('title', ' Create Teacher')
 
 @section('content')
     <div class="content-body">
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('students.index') }}">Students</a></li>
-                    <li class="breadcrumb-item"><a href="#">Create New Student</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('teachers.index') }}">Teachers</a></li>
+                    <li class="breadcrumb-item"><a href="#">Create New teacher</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -16,11 +16,11 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Create Student</h4>
+                            <h4 class="card-title">Create Teacher</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" action="{{ route('students.store') }}"
+                                <form class="needs-validation" novalidate="" action="{{ route('teachers.store') }}"
                                     method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">

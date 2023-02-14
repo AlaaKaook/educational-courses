@@ -1,14 +1,14 @@
 @extends('admin_layouts.admin_layout')
 
-@section('title', ' Create Student')
+@section('title', ' Update Teacher')
 
 @section('content')
     <div class="content-body">
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('students.index') }}">Students</a></li>
-                    <li class="breadcrumb-item"><a href="#">Create New Student</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('teachers.index') }}">Teachers</a></li>
+                    <li class="breadcrumb-item"><a href="#">Update Teacher Informations</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -16,13 +16,15 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Create Student</h4>
+                            <h4 class="card-title">Update Teacher</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" action="{{ route('students.store') }}"
-                                    method="post" enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate=""
+                                    action="{{ route('teachers.update', $teacher) }}" method="post">
                                     @csrf
+                                    @method('PUT')
+
                                     <div class="row">
                                         <div class="col-xl-6">
                                             <div class="mb-3 row">
@@ -33,7 +35,7 @@
                                                     <input type="text" name="fname"
                                                         class="form-control @error('fname') is-danger @enderror"
                                                         id="validationfirstname" placeholder="Enter a First Name.."
-                                                        required="" value="{{ old('fname') }}">
+                                                        required="" value="{{ $teacher->fname }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a First Name.
                                                     </div>
@@ -50,8 +52,8 @@
                                                 <div class="col-lg-8">
                                                     <input type="text" name="email"
                                                         class="form-control @error('email') is-danger @enderror"
-                                                        id="validationEmail" placeholder="Your valid email.."
-                                                        required="" value="{{ old('email') }}">
+                                                        id="validationEmail" placeholder="Your valid email.." required=""
+                                                        value="{{ $teacher->email }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a Email.
                                                     </div>
@@ -62,14 +64,14 @@
                                             </div>
 
                                             <div class="mb-3 row">
-                                                <label class="col-lg-3 col-form-label" for="validationCustom01">Username
+                                                <label class="col-lg-3 col-form-label" for="validationUsername">Username
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-8">
                                                     <input type="text" name="username"
                                                         class="form-control @error('username') is-danger @enderror"
-                                                        id="validationCustom01" placeholder="Enter a username.."
-                                                        required="" value="{{ old('username') }}">
+                                                        id="validationUsername" placeholder="Enter a username.."
+                                                        required="" value="{{ $teacher->user->username }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a username.
                                                     </div>
@@ -87,7 +89,7 @@
                                                     <input type="text" name="country"
                                                         class="form-control @error('country') is-danger @enderror"
                                                         id="validationCountry" placeholder="Enter a Country.."
-                                                        required="" value="{{ old('country') }}">
+                                                        required="" value="{{ $teacher->country }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a Country.
                                                     </div>
@@ -102,7 +104,7 @@
                                                     {{-- <span class="text-danger">*</span> --}}
                                                 </label>
                                                 <div class="col-lg-8">
-                                                    <textarea name="notes" class="form-control2" cols="42"></textarea>
+                                                    <textarea name="notes" class="form-control2" cols="42">{{ $teacher->notes }}</textarea>
                                                 </div>
                                             </div>
 
@@ -119,7 +121,7 @@
                                                     <input type="text" name="lname"
                                                         class="form-control @error('lname') is-danger @enderror"
                                                         id="validationlastname" placeholder="Enter a Last Name.."
-                                                        required="" value="{{ old('lname') }}">
+                                                        required="" value="{{ $teacher->lname }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a Last Name.
                                                     </div>
@@ -136,8 +138,8 @@
                                                 <div class="col-lg-8">
                                                     <input type="text" name="phone"
                                                         class="form-control @error('phone') is-danger @enderror"
-                                                        id="validationphone" placeholder="Enter a Phone.."
-                                                        required="" value="{{ old('phone') }}">
+                                                        id="validationphone" placeholder="Enter a Phone.." required=""
+                                                        value="{{ $teacher->phone }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a Phone.
                                                     </div>
@@ -155,7 +157,7 @@
                                                     <input type="password" name="password"
                                                         class="form-control @error('password') is-danger @enderror"
                                                         id="validationPassword" placeholder="Choose a safe password.."
-                                                        required="" value="{{ old('password') }}">
+                                                        required="" value="{{ $teacher->user->password }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a password.
                                                     </div>
@@ -170,10 +172,10 @@
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-8">
-                                                    <input type="date" name="birthdate"
+                                                    <input type="birthdate" name="birthdate"
                                                         class="datepicker-default form-control @error('birthdate') is-danger @enderror"
                                                         id="validationbirthdate" placeholder="Enter a Birthdate.."
-                                                        required="" value="{{ old('birthdate') }}">
+                                                        required="" value="{{ $teacher->birthdate }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a birthdate.
                                                     </div>
@@ -192,12 +194,14 @@
                                                         Female
                                                     </label>
                                                     <input class="form-check-input @error('gender') is-danger @enderror"
-                                                        type="radio" name="gender" value="female" checked="">
+                                                        type="radio" name="gender" value="female"
+                                                        {{ $teacher->gender == 'female' ? 'checked' : '' }}>
                                                     <label class="form-check-label">
                                                         Male
                                                     </label>
                                                     <input class="form-check-input @error('gender') is-danger @enderror"
-                                                        type="radio" name="gender" value="male">
+                                                        type="radio" name="gender" value="male"
+                                                        {{ $teacher->gender == 'male' ? 'checked' : '' }}>
                                                     <div class="invalid-feedback">
                                                         Please enter a gender.
                                                     </div>

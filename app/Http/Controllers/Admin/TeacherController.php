@@ -3,24 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Student;
+use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class TeacherController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $students = Student::all();
+        $teachers = Teacher::all();
         $users = User::all();
-        return view('admin.student.index' , ['students' => $students , 'users'=>$users]);
+        return view('admin.teacher.index' , ['teachers' => $teachers , 'users'=>$users]);
     }
 
     /**
@@ -30,7 +30,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('admin.student.create');
+        return view('admin.teacher.create');
     }
 
     /**
@@ -59,61 +59,61 @@ class StudentController extends Controller
         $user->email = $request->input('email');
         $user->username = $request->input('username');
         $user->password = Hash::make($request->input('password'));
-        $user->type = "Student";
+        $user->type = "Teacher";
         $user->save();
 
 
-        $student = new Student();
+        $teacher = new Teacher();
         $image=$request->file('image');
         $input['imagename'] = time(). '.' . $image->getClientOriginalExtension();
-        $path = public_path('/assets/upload/images/student_img');
+        $path = public_path('/assets/upload/images/teacher_img');
         $image->move($path ,  $input['imagename']);
-        $student->image = $input['imagename'];
-        $student->user_id = $user->id;
-        $student->fname = $request->input('fname');
-        $student->lname = $request->input('lname');
-        $student->phone = $request->input('phone');
-        $student->email = $request->input('email');
-        $student->gender = $request->input('gender');
-        $student->birthdate = $request->input('birthdate');
-        $student->country = $request->input('country');
-        $student->notes = $request->input('notes');
-        $student->save();
+        $teacher->image = $input['imagename'];
+        $teacher->user_id = $user->id;
+        $teacher->fname = $request->input('fname');
+        $teacher->lname = $request->input('lname');
+        $teacher->phone = $request->input('phone');
+        $teacher->email = $request->input('email');
+        $teacher->gender = $request->input('gender');
+        $teacher->birthdate = $request->input('birthdate');
+        $teacher->country = $request->input('country');
+        $teacher->notes = $request->input('notes');
+        $teacher->save();
 
 
-        return redirect()->route('students.show' , $student)->with('status','Add Student Successfully');
+        return redirect()->route('teachers.show' , $teacher)->with('status','Add Teacher Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Student  $student
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show(Teacher $teacher)
     {
-        return view('admin.student.show' , ['student'=>$student]);
+        return view('admin.teacher.show' , ['teacher'=>$teacher]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Student  $student
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit(Teacher $teacher)
     {
-        return view('admin.student.edit', ['student' => $student]);
+        return view('admin.teacher.edit', ['teacher' => $teacher]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Student  $student
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, Teacher $teacher)
     {
         $request->validate([
             'fname' => 'required|min:2',
@@ -129,7 +129,7 @@ class StudentController extends Controller
 
         if($request->hasFile('image'))
         {
-            $path = public_path('/assets/upload/images/student_img'.$student->image);
+            $path = public_path('/assets/upload/images/teacher_img'.$teacher->image);
 
             if(File::exists($path))
             {
@@ -137,42 +137,43 @@ class StudentController extends Controller
             }
             $image=$request->file('image');
             $input['imagename'] = time(). '.' . $image->getClientOriginalExtension();
-            $path = public_path('/assets/upload/images/student_img');
+            $path = public_path('/assets/upload/images/teacher_img');
             $image->move($path ,  $input['imagename']);
-            $student->image = $input['imagename'];
+            $teacher->image = $input['imagename'];
         }
 
-        $student->fname = $request->input('fname');
-        $student->lname = $request->input('lname');
-        $student->phone = $request->input('phone');
-        $student->email = $request->input('email');
-        $student->country = $request->input('country');
-        $student->gender = $request->input('gender');
-        $student->birthdate = $request->input('birthdate');
-        $student->notes = $request->input('notes');
-        $student->update();
+        $teacher->fname = $request->input('fname');
+        $teacher->lname = $request->input('lname');
+        $teacher->phone = $request->input('phone');
+        $teacher->email = $request->input('email');
+        $teacher->country = $request->input('country');
+        $teacher->gender = $request->input('gender');
+        $teacher->birthdate = $request->input('birthdate');
+        $teacher->notes = $request->input('notes');
+        $teacher->update();
 
 
-        $student->user->email = $request->input('email');
-        $student->user->username = $request->input('username');
-        $student->user->password = Hash::make($request->input('password'));
-        $student->user->type = "Student";
-        $student->user->update();
+        $teacher->user->email = $request->input('email');
+        $teacher->user->username = $request->input('username');
+        $teacher->user->password = Hash::make($request->input('password'));
+        $teacher->user->type = "Teacher";
+        $teacher->user->update();
 
-        return redirect()->route('students.show' , $student)->with('status','Update Student Successfully');
+        return redirect()->route('teachers.show' , $teacher)->with('status','Update Teacher Successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Student  $student
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Student $student)
+    public function destroy(Teacher $teacher)
     {
-        $student->delete();
-        $student->user->delete();
 
-        return redirect()->route('students.index')->with('status', 'Delete Student Successfully');
+        $teacher->delete();
+        $teacher->user->delete();
+
+        return redirect()->route('teachers.index')->with('status', 'Delete Teacher Successfully');
     }
 }
