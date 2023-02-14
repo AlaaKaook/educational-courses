@@ -1,14 +1,14 @@
 @extends('admin_layouts.admin_layout')
 
-@section('title', ' Update Category')
+@section('title', ' Create Sub Category')
 
 @section('content')
     <div class="content-body">
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('categories.index') }}">Categories</a></li>
-                    <li class="breadcrumb-item"><a href="#">Update Category Informations</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('categories.index') }}">Sub Categories</a></li>
+                    <li class="breadcrumb-item"><a href="#">Create New Sub Category</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -16,27 +16,26 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Update Category</h4>
+                            <h4 class="card-title">Create Sub Category</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate=""
-                                    action="{{ route('categories.update', $category) }}" method="post" enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate="" action="{{ route('subcategories.store') }}"
+                                    method="post" enctype="multipart/form-data">
                                     @csrf
-                                    @method('PUT')
-
                                     <div class="row">
+                                        {{-- <div class="col-xl-6"> --}}
                                             <div class="mb-3 row">
-                                                <label class="col-lg-2 col-form-label" for="validationname">Category Name
+                                                <label class="col-lg-2 col-form-label" for="validationname"> Sub Category Name
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-10">
                                                     <input type="text" name="name"
                                                         class="form-control @error('name') is-danger @enderror"
-                                                        id="validationname" placeholder="Enter a Category Name.."
-                                                        required="" value="{{ $category->name }}">
+                                                        id="validationname" placeholder="Enter a Sub Category Name.."
+                                                        required="" value="{{ old('name') }}">
                                                     <div class="invalid-feedback">
-                                                        Please enter a Category Name.
+                                                        Please enter a Sub Category Name.
                                                     </div>
                                                     @error('name')
                                                         <p class="text-danger">{{ $message }}</p>
@@ -44,23 +43,23 @@
                                                 </div>
                                             </div>
 
-
                                             <div class="mb-3 row">
                                                 <label class="col-lg-2 col-form-label" for="validationdescription">Description
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-10">
-                                                    <textarea name="description" class="form-control3" cols="42">{{ $category->description }}</textarea>
+                                                    <textarea name="description" class="form-control3" rows="33"></textarea>
                                                 </div>
                                             </div>
+
+                                        {{-- </div> --}}
 
                                     </div>
 
                                     <div class="row">
                                         <div class="input-group mb-3">
                                             <div class="form-file">
-                                                <input type="file" name="image"
-                                                    class="form-file-input form-control">
+                                                <input type="file" name="image" class="form-file-input form-control">
                                             </div>
                                             <span class="input-group-text">Upload</span>
                                         </div>

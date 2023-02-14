@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\StudentController as AdminStudentController;
 use App\Http\Controllers\Admin\TeacherController as AdminTeacherController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\Admin\SubcategoryController as AdminSubcategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,9 @@ Route::resource('students', AdminStudentController::class);
 Route::resource('teachers', AdminTeacherController::class);
 
 Route::resource('categories', AdminCategoryController::class);
+
+Route::resource('subcategories', AdminSubcategoryController::class);
+
 
 // Route::put('students/{student}/{user}', [AdminStudentController::class , 'update'])->name('students.update');
 

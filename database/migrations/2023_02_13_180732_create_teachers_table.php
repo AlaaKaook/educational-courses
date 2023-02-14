@@ -24,7 +24,7 @@ class CreateTeachersTable extends Migration
             $table->string('gender');
             $table->string('birthdate');
             $table->longText('notes')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }

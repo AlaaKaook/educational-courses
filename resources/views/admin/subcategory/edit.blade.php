@@ -1,14 +1,14 @@
 @extends('admin_layouts.admin_layout')
 
-@section('title', ' Update Category')
+@section('title', ' Update Sub Category')
 
 @section('content')
     <div class="content-body">
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('categories.index') }}">Categories</a></li>
-                    <li class="breadcrumb-item"><a href="#">Update Category Informations</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('categories.index') }}">Sub Categories</a></li>
+                    <li class="breadcrumb-item"><a href="#">Update Sub Category Informations</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -16,27 +16,27 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Update Category</h4>
+                            <h4 class="card-title">Update Sub Category</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
                                 <form class="needs-validation" novalidate=""
-                                    action="{{ route('categories.update', $category) }}" method="post" enctype="multipart/form-data">
+                                    action="{{ route('subcategories.update', $subcategory) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
 
                                     <div class="row">
                                             <div class="mb-3 row">
-                                                <label class="col-lg-2 col-form-label" for="validationname">Category Name
+                                                <label class="col-lg-2 col-form-label" for="validationname">Sub Category Name
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-10">
                                                     <input type="text" name="name"
                                                         class="form-control @error('name') is-danger @enderror"
                                                         id="validationname" placeholder="Enter a Category Name.."
-                                                        required="" value="{{ $category->name }}">
+                                                        required="" value="{{ $subcategory->name }}">
                                                     <div class="invalid-feedback">
-                                                        Please enter a Category Name.
+                                                        Please enter a Sub Category Name.
                                                     </div>
                                                     @error('name')
                                                         <p class="text-danger">{{ $message }}</p>
@@ -50,7 +50,7 @@
                                                     <span class="text-danger">*</span>
                                                 </label>
                                                 <div class="col-lg-10">
-                                                    <textarea name="description" class="form-control3" cols="42">{{ $category->description }}</textarea>
+                                                    <textarea name="description" class="form-control3" cols="42">{{ $subcategory->description }}</textarea>
                                                 </div>
                                             </div>
 
