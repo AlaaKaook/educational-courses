@@ -23,7 +23,7 @@ class CreateTeachersTable extends Migration
             $table->string('country');
             $table->string('gender');
             $table->string('birthdate');
-            $table->string('notes')->nullable();
+            $table->longText('notes')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });
