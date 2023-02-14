@@ -11,4 +11,10 @@ class DashboardController extends Controller
      {
         return view('admin.dashboard');
      }
+
+     public function test()
+     {
+        
+        return view('admin.subcategory.test');
+     }
 }

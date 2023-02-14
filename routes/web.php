@@ -28,6 +28,8 @@ Route::get('home/front', [FrontendController::class , 'index'])->name('home.fron
 
 Route::get('dashboard', [AdminDashboardController::class , 'index'])->name('dashboard');
 
+Route::get('test', [AdminDashboardController::class , 'test'])->name('test');
+
 Route::resource('students', AdminStudentController::class);
 
 Route::resource('teachers', AdminTeacherController::class);

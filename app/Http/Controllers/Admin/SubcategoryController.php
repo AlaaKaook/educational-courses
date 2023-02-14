@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -28,7 +29,8 @@ class SubcategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.subcategory.create');
+        $categories = Category::all();
+        return view('admin.subcategory.create' , ['categories' => $categories]);
     }
 
     /**
@@ -39,6 +41,12 @@ class SubcategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|min:2',
+            'category_id' => 'required',
+            'description' => 'required|min:5',
+        ]);
+
         $subcategory = new Subcategory();
 
         $image=$request->file('image');
@@ -48,6 +56,7 @@ class SubcategoryController extends Controller
         $subcategory->image = $input['imagename'];
 
         $subcategory->name = $request->input('name');
+        $subcategory->category_id = $request->input('category_id');
         $subcategory->description = $request->input('description');
 
         $subcategory->save();
@@ -74,7 +83,8 @@ class SubcategoryController extends Controller
      */
     public function edit(Subcategory $subcategory)
     {
-        return view('admin.subcategory.edit', ['subcategory' => $subcategory]);
+        $categories = Category::all();
+        return view('admin.subcategory.edit', ['subcategory' => $subcategory , 'categories' => $categories]);
     }
 
     /**
@@ -86,6 +96,12 @@ class SubcategoryController extends Controller
      */
     public function update(Request $request, Subcategory $subcategory)
     {
+        $request->validate([
+            'name' => 'required|min:2',
+            'category_id' => 'required',
+            'description' => 'required|min:5',
+        ]);
+
         if($request->hasFile('image'))
         {
             $path = public_path('/assets/upload/images/subcategory_img' . $subcategory->image);
@@ -101,6 +117,7 @@ class SubcategoryController extends Controller
             $subcategory->image = $input['imagename'];
         }
 
+        $subcategory->category_id = $request->input('category_id');
         $subcategory->name = $request->input('name');
         $subcategory->description = $request->input('description');
 

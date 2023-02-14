@@ -39,6 +39,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|min:2',
+            'description' => 'required|min:5',
+        ]);
+
         $category = new Category();
 
         $image=$request->file('image');
@@ -86,6 +91,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        $request->validate([
+            'name' => 'required|min:2',
+            'description' => 'required|min:5',
+        ]);
+
         if($request->hasFile('image'))
         {
             $path = public_path('/assets/upload/images/category_img'.$category->image);

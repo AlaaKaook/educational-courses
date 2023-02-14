@@ -23,7 +23,7 @@
                                     alt="">
                             </div>
                             <h3 class="mt-3 mb-1 text-white">{{$subcategory->name}}</h3>
-                            {{-- <p class="text-white mb-0">{{$student->user->type}}</p> --}}
+                            <p class="text-white mb-0">Category : {{$subcategory->category->name}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             {{-- <li class="list-group-item d-flex justify-content-between"><span class="mb-0 mx-5 mt-2">

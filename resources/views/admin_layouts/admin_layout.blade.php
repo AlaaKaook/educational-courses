@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="{{ asset('assets/dashboard/vendor/pickadate/themes/default.date.css') }}">
     <link href="../icon.css?family=Material+Icons" rel="stylesheet">
     <!-- Custom Stylesheet -->
-    <link href="{{ asset('assets/dashboard/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/dashboard/css/style.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('assets/dashboard/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet"> --}}
+    {{-- <link href="{{ asset('assets/dashboard/css/style.css') }}" rel="stylesheet"> --}}
 
 
 </head>

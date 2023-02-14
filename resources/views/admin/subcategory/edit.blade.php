@@ -26,6 +26,31 @@
                                     @method('PUT')
 
                                     <div class="row">
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-2 col-form-label" for="validationcategory"> Choose Category
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-10 basic-form">
+                                               
+                                                {{-- <select class="default-select  form-control wide">
+                                                    @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                    @endforeach
+                                                </select> --}}
+
+                                                <select name="category_id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                    @foreach ($categories as $category)
+                                                    <option value="{{ $category->id == $category->id ? $category->id : '' }}" >{{ $category->name }}</option>
+                                                    @endforeach
+                                                  </select>
+
+                                                @error('category_id')
+                                                    <p class="text-danger">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                        </div>
+
                                             <div class="mb-3 row">
                                                 <label class="col-lg-2 col-form-label" for="validationname">Sub Category Name
                                                     <span class="text-danger">*</span>

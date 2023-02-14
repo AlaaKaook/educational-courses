@@ -26,7 +26,8 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>name</th>
+                                        <th>Name</th>
+                                        <th>Category</th>
                                         <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
@@ -35,7 +36,11 @@
                                     @foreach ($subcategories as $subcategory)
                                             <tr class="text-center">
                                                 <th>{{ $subcategory->id }}</th>
+
                                                 <td> <a href="{{ route('subcategories.show', $subcategory) }}" class="text-primary">{{ $subcategory->name }}</a></td>
+
+                                                <td>{{$subcategory->category->name}}</td>
+
 
                                                 @if (Str::length($subcategory->description) >= 20)
                                                     <td>{{ Str::substr($subcategory->description, 0, 20) }}...</td>

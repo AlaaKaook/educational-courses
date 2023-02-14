@@ -26,7 +26,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>name</th>
+                                        <th>Name</th>
                                         <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
