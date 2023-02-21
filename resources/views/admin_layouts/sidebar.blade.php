@@ -22,12 +22,12 @@
 
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 						<i class="fas fa-info-circle"></i>
-							<span class="nav-text">Apps</span>
+							<span class="nav-text">Students</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="app-profile.html">Profile</a></li>
-							<li><a href="post-details.html">Post Details</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                            <li><a href="{{ route('students.index') }}">All Students</a></li>
+							<li><a href="{{ route('students.create') }}">Create New Student</a></li>
+                            {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                                 <ul aria-expanded="false">
                                     <li><a href="email-compose.html">Compose</a></li>
                                     <li><a href="email-inbox.html">Inbox</a></li>
@@ -45,30 +45,30 @@
 									<li><a href="ecom-invoice.html">Invoice</a></li>
 									<li><a href="ecom-customers.html">Customers</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-chart-line"></i>
-							<span class="nav-text">Charts</span>
+							<span class="nav-text">Teachers</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="chart-flot.html">Flot</a></li>
-                            <li><a href="chart-morris.html">Morris</a></li>
-                            <li><a href="chart-chartjs.html">Chartjs</a></li>
+                            <li><a href="{{ route('teachers.index') }}">All Teachers</a></li>
+                            <li><a href="{{ route('teachers.create') }}">Create New Teacher</a></li>
+                            {{-- <li><a href="chart-chartjs.html">Chartjs</a></li>
                             <li><a href="chart-chartist.html">Chartist</a></li>
                             <li><a href="chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="chart-peity.html">Peity</a></li>
+                            <li><a href="chart-peity.html">Peity</a></li> --}}
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fab fa-bootstrap"></i>
-							<span class="nav-text">Bootstrap</span>
+							<span class="nav-text">Courses</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="ui-accordion.html">Accordion</a></li>
-                            <li><a href="ui-alert.html">Alert</a></li>
-                            <li><a href="ui-badge.html">Badge</a></li>
+                            <li><a href="{{ route('courses.index') }}">All Courses</a></li>
+                            <li><a href="{{ route('courses.create') }}">Create New Course</a></li>
+                            {{-- <li><a href="ui-badge.html">Badge</a></li>
                             <li><a href="ui-button.html">Button</a></li>
                             <li><a href="ui-modal.html">Modal</a></li>
                             <li><a href="ui-button-group.html">Button Group</a></li>
@@ -81,58 +81,57 @@
                             <li><a href="ui-tab.html">Tab</a></li>
                             <li><a href="ui-typography.html">Typography</a></li>
                             <li><a href="ui-pagination.html">Pagination</a></li>
-                            <li><a href="ui-grid.html">Grid</a></li>
-
+                            <li><a href="ui-grid.html">Grid</a></li> --}}
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-heart"></i>
-							<span class="nav-text">Plugins</span>
+							<span class="nav-text">Lessons</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="uc-select2.html">Select 2</a></li>
-                            <li><a href="uc-nestable.html">Nestedable</a></li>
-                            <li><a href="uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
+                            <li><a href="{{ route('lessons.index') }}">All Lessons</a></li>
+                            <li><a href="{{ route('create_lesson_youtube') }}">Create New Lesson youtube</a></li>
+                            <li><a href="{{ route('create_inweb')}}">Create New Lesson In Web Site</a></li>
+                            {{-- <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
                             <li><a href="uc-toastr.html">Toastr</a></li>
                             <li><a href="map-jqvmap.html">Jqv Map</a></li>
-							<li><a href="uc-lightgallery.html">Light Gallery</a></li>
+							<li><a href="uc-lightgallery.html">Light Gallery</a></li> --}}
                         </ul>
                     </li>
-                    <li><a href="widget-basic.html" class="" aria-expanded="false">
+                    {{-- <li><a href="widget-basic.html" class="" aria-expanded="false">
 							<i class="fas fa-user-check"></i>
 							<span class="nav-text">Widget</span>
 						</a>
-					</li>
+					</li> --}}
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-file-alt"></i>
-							<span class="nav-text">Forms</span>
+							<span class="nav-text">Categories</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="form-element.html">Form Elements</a></li>
-                            <li><a href="form-wizard.html">Wizard</a></li>
-                            <li><a href="form-ckeditor.html">CkEditor</a></li>
+                            <li><a href="{{ route('categories.index') }}">All Categories</a></li>
+                            <li><a href="{{ route('categories.create') }}">Create New Category</a></li>
+                            {{-- <li><a href="form-ckeditor.html">CkEditor</a></li>
                             <li><a href="form-pickers.html">Pickers</a></li>
-                            <li><a href="form-validation.html">Form Validate</a></li>
+                            <li><a href="form-validation.html">Form Validate</a></li> --}}
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-table"></i>
-							<span class="nav-text">Table</span>
+							<span class="nav-text">Sub Categories</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                            <li><a href="table-datatable-basic.html">Datatable</a></li>
+                            <li><a href="{{ route('subcategories.index') }}">All Sub Categories</a></li>
+                            <li><a href="{{ route('subcategories.create') }}">Create New Sub Categories</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-clone"></i>
-							<span class="nav-text">Pages</span>
+							<span class="nav-text">Discounts</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="page-login.html">Login</a></li>
-                            <li><a href="page-register.html">Register</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                            <li><a href="{{ route('discounts.index') }}">All Discounts</a></li>
+                            <li><a href="{{ route('discounts.create') }}">Create New Discount</a></li>
+                            {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
                                 <ul aria-expanded="false">
                                     <li><a href="page-error-400.html">Error 400</a></li>
                                     <li><a href="page-error-403.html">Error 403</a></li>
@@ -142,7 +141,7 @@
                                 </ul>
                             </li>
                             <li><a href="page-lock-screen.html">Lock Screen</a></li>
-                            <li><a href="empty-page.html">Empty Page</a></li>
+                            <li><a href="empty-page.html">Empty Page</a></li> --}}
                         </ul>
                     </li>
                 </ul>
