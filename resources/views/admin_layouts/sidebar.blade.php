@@ -9,13 +9,13 @@
 							<span class="nav-text">Dashboard</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="index.html">Dashboard Light</a></li>
-							<li><a href="index-2.html">Dashboard Dark</a></li>
+							<li><a href="{{ route('dashboard') }}">Home</a></li>
+							{{-- <li><a href="index-2.html">Dashboard Dark</a></li>
 							<li><a href="project-page.html">Project</a></li>
 							<li><a href="contacts.html">Contacts</a></li>
 							<li><a href="kanban.html">Kanban</a></li>
 							<li><a href="calendar-page.html">Calendar</a></li>
-							<li><a href="message.html">Messages</a></li>
+							<li><a href="message.html">Messages</a></li> --}}
 						</ul>
 
                     </li>
@@ -90,8 +90,8 @@
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('lessons.index') }}">All Lessons</a></li>
-                            <li><a href="{{ route('create_lesson_youtube') }}">Create New Lesson youtube</a></li>
-                            <li><a href="{{ route('create_inweb')}}">Create New Lesson In Web Site</a></li>
+                            <li><a href="{{ route('create_lesson_youtube') }}">Create Lesson youtube</a></li>
+                            <li><a href="{{ route('create_inweb')}}">Create Lesson In Web</a></li>
                             {{-- <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
                             <li><a href="uc-toastr.html">Toastr</a></li>
                             <li><a href="map-jqvmap.html">Jqv Map</a></li>
