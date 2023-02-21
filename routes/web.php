@@ -6,6 +6,9 @@ use App\Http\Controllers\Admin\StudentController as AdminStudentController;
 use App\Http\Controllers\Admin\TeacherController as AdminTeacherController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\SubcategoryController as AdminSubcategoryController;
+use App\Http\Controllers\Admin\CourseController as AdminCourseController;
+use App\Http\Controllers\Admin\DiscountController as AdminDiscountController;
+use App\Http\Controllers\Admin\LessonController as AdminLessonController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -38,11 +41,21 @@ Route::resource('categories', AdminCategoryController::class);
 
 Route::resource('subcategories', AdminSubcategoryController::class);
 
+Route::resource('courses', AdminCourseController::class);
 
-// Route::put('students/{student}/{user}', [AdminStudentController::class , 'update'])->name('students.update');
+Route::resource('lessons', AdminLessonController::class)->except('create' , 'store');
 
-// Route::get('students/{student}/{user}/edit', [AdminStudentController::class , 'edit'])->name('students.edit');
+Route::get('lesson/create/youtube', [AdminLessonController::class, 'create_youtube'])->name('create_lesson_youtube');
 
+Route::get('lesson/create/inweb', [AdminLessonController::class, 'create_inweb'])->name('create_inweb');
+
+Route::post('lessons/youtube', [AdminLessonController::class, 'store_with_video'])->name('lessons_inweb.store');
+
+Route::post('lessons/inweb', [AdminLessonController::class, 'store_youtube'])->name('lessons_youtube.store');
+
+Route::put('lessons/{lesson}/web', [AdminLessonController::class, 'update_inweb'])->name('update_inweb');
+
+Route::resource('discounts', AdminDiscountController::class);
 
 Auth::routes();
 

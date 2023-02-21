@@ -25,24 +25,26 @@
                                     method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
-                                       
+
                                         <div class="mb-3 row">
                                             <label class="col-lg-2 col-form-label" for="validationcategory"> Choose Category
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-10 basic-form">
-                                               
+
                                                 {{-- <select class="default-select  form-control wide">
                                                     @foreach ($categories as $category)
                                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                                     @endforeach
                                                 </select> --}}
 
-                                                <select name="category_id" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                <select name="category_id" class="form-select form-select-lg mb-3"
+                                                    aria-label=".form-select-lg example">
                                                     @foreach ($categories as $category)
-                                                    <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+                                                        <option value="{{ $category->id }}" selected>{{ $category->name }}
+                                                        </option>
                                                     @endforeach
-                                                  </select>
+                                                </select>
 
                                                 @error('category_id')
                                                     <p class="text-danger">{{ $message }}</p>
@@ -50,32 +52,32 @@
                                             </div>
                                         </div>
 
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-2 col-form-label" for="validationname"> Sub Category Name
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="col-lg-10">
-                                                    <input type="text" name="name"
-                                                        class="form-control @error('name') is-danger @enderror"
-                                                        id="validationname" placeholder="Enter a Sub Category Name.."
-                                                        required="" value="{{ old('name') }}">
-                                                    <div class="invalid-feedback">
-                                                        Please enter a Sub Category Name.
-                                                    </div>
-                                                    @error('name')
-                                                        <p class="text-danger">{{ $message }}</p>
-                                                    @enderror
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-2 col-form-label" for="validationname"> Sub Category Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-10">
+                                                <input type="text" name="name"
+                                                    class="form-control @error('name') is-danger @enderror"
+                                                    id="validationname" placeholder="Enter a Sub Category Name.."
+                                                    required="" value="{{ old('name') }}">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Sub Category Name.
                                                 </div>
+                                                @error('name')
+                                                    <p class="text-danger">{{ $message }}</p>
+                                                @enderror
                                             </div>
+                                        </div>
 
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-2 col-form-label" for="validationdescription">Description
-                                                    <span class="text-danger">*</span>
-                                                </label>
-                                                <div class="col-lg-10">
-                                                    <textarea name="description" class="form-control3" rows="33"></textarea>
-                                                </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-2 col-form-label" for="validationdescription">Description
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-10">
+                                                <textarea name="description" class="form-control3" rows="33"></textarea>
                                             </div>
+                                        </div>
 
                                         {{-- </div> --}}
 
