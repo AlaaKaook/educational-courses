@@ -71,7 +71,7 @@ class LessonController extends Controller
         $lesson->description = $request->input('description');
         $lesson->save();
 
-        return redirect()->route('admin.lessonsindex')->with('status','Add Lesson Successfully');
+        return redirect()->route('admin.lessons.index')->with('status','Add Lesson Successfully');
     }
 
      /**

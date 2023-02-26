@@ -35,10 +35,10 @@
                     <!-- Popular Course Item -->
                     <div class="col-lg-4 course_box">
                         <div class="card">
-                            <img class="card-img-top" src="{{ asset('assets/upload/images/course_img/' . $course->image) }}"
+                            <img class="card-img-top" width="350px" height="263.77px" src="{{ asset('assets/upload/images/course_img/' . $course->image) }}"
                                 alt="Image Course">
                             <div class="card-body text-center">
-                                <div class="card-title"><a href="courses.html">{{ $course->name }}</a></div>
+                                <div class="card-title"><a href="{{route('lessons' , $course)}}">{{ $course->name }}</a></div>
 
                                 @if (Str::length($course->description) >= 25)
                                     <div class="card-text">{{ Str::substr($course->description, 0, 25) }}....</div>
