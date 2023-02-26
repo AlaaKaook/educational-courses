@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\SubcategoryController as AdminSubcategoryControll
 use App\Http\Controllers\Admin\CourseController as AdminCourseController;
 use App\Http\Controllers\Admin\DiscountController as AdminDiscountController;
 use App\Http\Controllers\Admin\LessonController as AdminLessonController;
+use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Frontend\CourseController;
 use App\Http\Controllers\Frontend\LessonController;
 use Illuminate\Support\Facades\Auth;
@@ -65,6 +66,7 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
 
     Route::resource('discounts', AdminDiscountController::class)->only('index' , 'create' , 'store' , 'destroy');
 
+    Route::resource('sliders', AdminSliderController::class);
 });
 
     Auth::routes();
