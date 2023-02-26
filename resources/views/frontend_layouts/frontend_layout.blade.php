@@ -19,6 +19,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/main_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/responsive.css') }}">
 
+    <!-- link courses -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/courses_styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/courses_responsive.css') }}">
+
 </head>
 
 <body>
@@ -27,7 +31,7 @@
 
         @include('frontend_layouts.header')
 
-        @include('frontend_layouts.hero')
+        {{-- @include('frontend_layouts.hero') --}}
 
 
         @yield('content')

@@ -16,7 +16,7 @@
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="#">home</a></li>
 						<li class="main_nav_item"><a href="#">about us</a></li>
-						<li class="main_nav_item"><a href="courses.html">courses</a></li>
+						<li class="main_nav_item"><a href="{{route('courses')}}">courses</a></li>
 						<li class="main_nav_item"><a href="elements.html">elements</a></li>
 						<li class="main_nav_item"><a href="news.html">news</a></li>
 						<li class="main_nav_item"><a href="contact.html">contact</a></li>
@@ -25,8 +25,8 @@
 			</nav>
 		</div>
 		<div class="header_side d-flex flex-row justify-content-center align-items-center">
-			<img src="{{ asset('assets/frontend/images/phone-call.svg') }}" alt="">
-			<span>+43 4566 7788 2457</span>
+			<img src="{{ asset('assets/frontend/images/phone-call.svg') }}" alt="Phone">
+			<span>+963 999999999</span>
 		</div>
 
 		<!-- Hamburger -->

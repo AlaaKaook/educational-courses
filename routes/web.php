@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\SubcategoryController as AdminSubcategoryControll
 use App\Http\Controllers\Admin\CourseController as AdminCourseController;
 use App\Http\Controllers\Admin\DiscountController as AdminDiscountController;
 use App\Http\Controllers\Admin\LessonController as AdminLessonController;
+use App\Http\Controllers\Frontend\CourseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +30,7 @@ Route::get('/', function () {
 
 Route::get('home/front', [FrontendController::class , 'index'])->name('home.front');
 
-// Route::get('courses', [FrontendController::class , 'index'])->name('courses');
+Route::get('courses', [CourseController::class , 'index'])->name('courses');
 
 
 
