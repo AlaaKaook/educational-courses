@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('categories.index') }}">Categories</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.categories.index') }}">Categories</a></li>
                     <li class="breadcrumb-item"><a href="#">Create New Category</a></li>
                 </ol>
             </div>
@@ -20,7 +20,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" action="{{ route('categories.store') }}"
+                                <form class="needs-validation" novalidate="" action="{{ route('admin.categories.store') }}"
                                     method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">

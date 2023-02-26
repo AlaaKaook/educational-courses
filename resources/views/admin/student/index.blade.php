@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('students.index') }}">Students</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.students.index') }}">Students</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">All Students</a></li>
                 </ol>
             </div>
@@ -39,7 +39,7 @@
                                         @foreach ($students as $student)
                                                 <tr class="text-center">
                                                     <th>{{ $student->id }}</th>
-                                                    <td> <a href="{{ route('students.show', $student) }}" class="text-primary">{{ $student->fname }} {{ $student->lname }}</a></td>
+                                                    <td> <a href="{{ route('admin.students.show', $student) }}" class="text-primary">{{ $student->fname }} {{ $student->lname }}</a></td>
                                                     <td>{{ $student->email }} </td>
                                                     <td>{{ $student->country }}</td>
                                                     <td>{{ $student->gender }}</td>
@@ -55,12 +55,12 @@
                                                         <div>
 
 
-                                                            <form action="{{ route('students.destroy', $student) }}"
+                                                            <form action="{{ route('admin.students.destroy', $student) }}"
                                                                 method="post">
                                                                 @csrf
                                                                 @method('delete')
 
-                                                                <a href="{{ route('students.edit', $student) }}"
+                                                                <a href="{{ route('admin.students.edit', $student) }}"
                                                                     class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                         class="fas fa-pencil-alt"></i></a>
 

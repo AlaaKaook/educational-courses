@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a href="{{ route('courses.index') }}">courses</a></li>
+                <li class="breadcrumb-item active"><a href="{{ route('admin.courses.index') }}">courses</a></li>
                 <li class="breadcrumb-item"><a href="javascript:void(0)">All courses</a></li>
             </ol>
         </div>
@@ -38,7 +38,7 @@
                                     @foreach ($courses as $course)
                                             <tr class="text-center">
                                                 <th>{{ $course->id }}</th>
-                                                <td> <a href="{{ route('courses.show', $course) }}" class="text-primary">{{ $course->name }} </a></td>
+                                                <td> <a href="{{ route('admin.courses.show', $course) }}" class="text-primary">{{ $course->name }} </a></td>
                                                 <td>{{ $course->category->name }}</td>
                                                 <td>{{ $course->subcategory->name }}</td>
                                                 <td>{{ $course->teacher->fname }} {{ $course->teacher->lname }}</td>
@@ -48,12 +48,12 @@
                                                     <div>
 
 
-                                                        <form action="{{ route('courses.destroy', $course) }}"
+                                                        <form action="{{ route('admin.courses.destroy', $course) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('delete')
 
-                                                            <a href="{{ route('courses.edit', $course) }}"
+                                                            <a href="{{ route('admin.courses.edit', $course) }}"
                                                                 class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                     class="fas fa-pencil-alt"></i></a>
 

@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('lessons.index') }}">Lessons</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.lessons.index') }}">Lessons</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">All Lessons</a></li>
                 </ol>
             </div>
@@ -45,12 +45,12 @@
 
                                                 <td>
                                                     <div>
-                                                        <form action="{{ route('lessons.destroy', $lesson) }}"
+                                                        <form action="{{ route('admin.lessons.destroy', $lesson) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('delete')
 
-                                                            <a href="{{ route('lessons.edit', $lesson) }}"
+                                                            <a href="{{ route('admin.lessons.edit', $lesson) }}"
                                                                 class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                     class="fas fa-pencil-alt"></i></a>
 

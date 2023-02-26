@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('students.index') }}">Discount Codes</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.discounts.index') }}">Discount Codes</a></li>
                     <li class="breadcrumb-item"><a href="#">Create New Discount Code</a></li>
                 </ol>
             </div>
@@ -20,7 +20,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" action="{{ route('discounts.store') }}"
+                                <form class="needs-validation" novalidate="" action="{{ route('admin.discounts.store') }}"
                                     method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="row">
@@ -70,7 +70,7 @@
 
                                         <div class="col-xl-6">
 
-                                            <div class="mb-3 row">
+                                            <div class="mb-3 row mt-3">
                                                 <label class="col-lg-3 col-form-label" for="validationRate">Rate <span
                                                         class="text-danger">*</span>
                                                 </label>

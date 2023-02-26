@@ -16,7 +16,8 @@ class DiscountController extends Controller
      */
     public function index()
     {
-        //
+        $discount_code = Discount_code::all();
+        return view('admin.discount.index' , ['discount_code' => $discount_code]);
     }
 
     /**
@@ -53,40 +54,6 @@ class DiscountController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Discount_code  $discount_code
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Discount_code $discount_code)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Discount_code  $discount_code
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Discount_code $discount_code)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Discount_code  $discount_code
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Discount_code $discount_code)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Discount_code  $discount_code
@@ -94,6 +61,8 @@ class DiscountController extends Controller
      */
     public function destroy(Discount_code $discount_code)
     {
-        //
+        $discount_code->delete();
+
+        return redirect()->route('admin.discount.index')->with('status','Delete Discount Code Successfully');
     }
 }

@@ -46,7 +46,7 @@
                                     <li class="list-group-item d-flex justify-content-between"><span class="mb-0 mx-5 mt-2">
                                         Gender :</span> <strong class="text-muted md-change">{{$student->gender}} </strong></li>
                         </ul>
-                        <form action="{{ route('students.index') }}" method="get">
+                        <form action="{{ route('admin.students.index') }}" method="get">
 
                         <div class="card-footer border-0 mt-0">
                             <button class="btn btn-primary btn-lg btn-block">

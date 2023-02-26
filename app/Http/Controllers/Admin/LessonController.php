@@ -71,7 +71,7 @@ class LessonController extends Controller
         $lesson->description = $request->input('description');
         $lesson->save();
 
-        return redirect()->route('lessonsindex')->with('status','Add Lesson Successfully');
+        return redirect()->route('admin.lessonsindex')->with('status','Add Lesson Successfully');
     }
 
      /**
@@ -103,7 +103,7 @@ class LessonController extends Controller
         $lesson->description = $request->input('description');
         $lesson->save();
 
-        return redirect()->route('lessons.index')->with('status','Add Lesson Video Successfully');
+        return redirect()->route('admin.lessons.index')->with('status','Add Lesson Video Successfully');
     }
 
     /**
@@ -180,7 +180,7 @@ class LessonController extends Controller
         $lesson->description = $request->input('description');
         $lesson->update();
 
-        return redirect()->route('lessons.index')->with('status','Update Lesson Video Successfully');
+        return redirect()->route('admin.lessons.index')->with('status','Update Lesson Video Successfully');
 
     }
 
@@ -208,7 +208,7 @@ class LessonController extends Controller
         $lesson->description = $request->input('description');
         $lesson->update();
 
-        return redirect()->route('lessons.index')->with('status','Update Lesson Video Successfully');
+        return redirect()->route('admin.lessons.index')->with('status','Update Lesson Video Successfully');
 
     }
 
@@ -222,6 +222,6 @@ class LessonController extends Controller
     {
         $lesson->delete();
 
-        return redirect()->route('lessons.index')->with('status','Delete :Lesson Successfully');
+        return redirect()->route('admin.lessons.index')->with('status','Delete :Lesson Successfully');
     }
 }

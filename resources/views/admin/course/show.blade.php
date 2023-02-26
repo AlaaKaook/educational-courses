@@ -75,7 +75,7 @@
                                     Description :</span> <strong class="text-muted md-change">{{ $course->description }}
                                 </strong></li>
                         </ul>
-                        <form action="{{ route('courses.index') }}" method="get">
+                        <form action="{{ route('admin.courses.index') }}" method="get">
 
                             <div class="card-footer border-0 mt-0">
                                 <button class="btn btn-primary btn-lg btn-block">

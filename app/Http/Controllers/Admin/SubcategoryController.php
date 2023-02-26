@@ -61,7 +61,7 @@ class SubcategoryController extends Controller
 
         $subcategory->save();
 
-        return redirect()->route('subcategories.show' , $subcategory)->with('status','Add Sub Category Successfully');
+        return redirect()->route('admin.subcategories.show' , $subcategory)->with('status','Add Sub Category Successfully');
     }
 
     /**
@@ -123,7 +123,7 @@ class SubcategoryController extends Controller
 
         $subcategory->update();
 
-        return redirect()->route('subcategories.show' , $subcategory)->with('status','Update Sub Category Successfully');
+        return redirect()->route('admin.subcategories.show' , $subcategory)->with('status','Update Sub Category Successfully');
     }
 
     /**
@@ -136,6 +136,6 @@ class SubcategoryController extends Controller
     {
         $subcategory->delete();
 
-        return redirect()->route('subcategories.index')->with('status','Delete Sub Sub Category Successfully');
+        return redirect()->route('admin.subcategories.index')->with('status','Delete Sub Sub Category Successfully');
     }
 }

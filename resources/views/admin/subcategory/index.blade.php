@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a href="{{ route('subcategories.index') }}">Sub Categories</a></li>
+                <li class="breadcrumb-item active"><a href="{{ route('admin.subcategories.index') }}">Sub Categories</a></li>
                 <li class="breadcrumb-item"><a href="javascript:void(0)">All Sub Categories</a></li>
             </ol>
         </div>
@@ -37,7 +37,7 @@
                                             <tr class="text-center">
                                                 <th>{{ $subcategory->id }}</th>
 
-                                                <td> <a href="{{ route('subcategories.show', $subcategory) }}" class="text-primary">{{ $subcategory->name }}</a></td>
+                                                <td> <a href="{{ route('admin.subcategories.show', $subcategory) }}" class="text-primary">{{ $subcategory->name }}</a></td>
 
                                                 <td>{{$subcategory->category->name}}</td>
 
@@ -52,12 +52,12 @@
                                                     <div>
 
 
-                                                        <form action="{{ route('subcategories.destroy', $subcategory) }}"
+                                                        <form action="{{ route('admin.subcategories.destroy', $subcategory) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('delete')
 
-                                                            <a href="{{ route('subcategories.edit', $subcategory) }}"
+                                                            <a href="{{ route('admin.subcategories.edit', $subcategory) }}"
                                                                 class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                     class="fas fa-pencil-alt"></i></a>
 

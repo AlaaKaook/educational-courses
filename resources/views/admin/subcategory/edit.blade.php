@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('categories.index') }}">Sub Categories</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.subcategories.index') }}">Sub Categories</a></li>
                     <li class="breadcrumb-item"><a href="#">Update Sub Category Informations</a></li>
                 </ol>
             </div>
@@ -21,7 +21,7 @@
                         <div class="card-body">
                             <div class="form-validation">
                                 <form class="needs-validation" novalidate=""
-                                    action="{{ route('subcategories.update', $subcategory) }}" method="post" enctype="multipart/form-data">
+                                    action="{{ route('admin.subcategories.update', $subcategory) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
 
@@ -32,7 +32,7 @@
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-10 basic-form">
-                                               
+
                                                 {{-- <select class="default-select  form-control wide">
                                                     @foreach ($categories as $category)
                                                     <option value="{{ $category->id }}">{{ $category->name }}</option>

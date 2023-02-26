@@ -29,34 +29,40 @@ Route::get('/', function () {
 
 Route::get('home/front', [FrontendController::class , 'index'])->name('home.front');
 
-Route::get('dashboard', [AdminDashboardController::class , 'index'])->name('dashboard');
+// Route::get('courses', [FrontendController::class , 'index'])->name('courses');
 
-Route::get('test', [AdminDashboardController::class , 'test'])->name('test');
 
-Route::resource('students', AdminStudentController::class);
 
-Route::resource('teachers', AdminTeacherController::class);
+Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
 
-Route::resource('categories', AdminCategoryController::class);
+    Route::get('dashboard', [AdminDashboardController::class , 'index'])->name('dashboard');
 
-Route::resource('subcategories', AdminSubcategoryController::class);
+    Route::resource('students', AdminStudentController::class);
 
-Route::resource('courses', AdminCourseController::class);
+    Route::resource('teachers', AdminTeacherController::class);
 
-Route::resource('lessons', AdminLessonController::class)->except('create' , 'store');
+    Route::resource('categories', AdminCategoryController::class);
 
-Route::get('lesson/create/youtube', [AdminLessonController::class, 'create_youtube'])->name('create_lesson_youtube');
+    Route::resource('subcategories', AdminSubcategoryController::class);
 
-Route::get('lesson/create/inweb', [AdminLessonController::class, 'create_inweb'])->name('create_inweb');
+    Route::resource('courses', AdminCourseController::class);
 
-Route::post('lessons/youtube', [AdminLessonController::class, 'store_with_video'])->name('lessons_inweb.store');
+    Route::resource('lessons', AdminLessonController::class)->except('create' , 'store');
 
-Route::post('lessons/inweb', [AdminLessonController::class, 'store_youtube'])->name('lessons_youtube.store');
+    Route::get('lesson/create/youtube', [AdminLessonController::class, 'create_youtube'])->name('create_lesson_youtube');
 
-Route::put('lessons/{lesson}/web', [AdminLessonController::class, 'update_inweb'])->name('update_inweb');
+    Route::get('lesson/create/inweb', [AdminLessonController::class, 'create_inweb'])->name('create_inweb');
 
-Route::resource('discounts', AdminDiscountController::class);
+    Route::post('lessons/youtube', [AdminLessonController::class, 'store_with_video'])->name('lessons_inweb.store');
 
-Auth::routes();
+    Route::post('lessons/inweb', [AdminLessonController::class, 'store_youtube'])->name('lessons_youtube.store');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::put('lessons/{lesson}/web', [AdminLessonController::class, 'update_inweb'])->name('update_inweb');
+
+    Route::resource('discounts', AdminDiscountController::class)->only('index' , 'create' , 'store' , 'destroy');
+
+});
+
+    Auth::routes();
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

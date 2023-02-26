@@ -81,7 +81,7 @@ class TeacherController extends Controller
         $teacher->save();
 
 
-        return redirect()->route('teachers.show' , $teacher)->with('status','Add Teacher Successfully');
+        return redirect()->route('admin.teachers.show' , $teacher)->with('status','Add Teacher Successfully');
     }
 
     /**
@@ -159,7 +159,7 @@ class TeacherController extends Controller
         $teacher->user->type = "Teacher";
         $teacher->user->update();
 
-        return redirect()->route('teachers.show' , $teacher)->with('status','Update Teacher Successfully');
+        return redirect()->route('admin.teachers.show' , $teacher)->with('status','Update Teacher Successfully');
     }
 
     /**
@@ -174,6 +174,6 @@ class TeacherController extends Controller
         $teacher->delete();
         $teacher->user->delete();
 
-        return redirect()->route('teachers.index')->with('status', 'Delete Teacher Successfully');
+        return redirect()->route('admin.teachers.index')->with('status', 'Delete Teacher Successfully');
     }
 }

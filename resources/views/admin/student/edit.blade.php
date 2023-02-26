@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('students.index') }}">Students</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.students.index') }}">Students</a></li>
                     <li class="breadcrumb-item"><a href="#">Update Student Informations</a></li>
                 </ol>
             </div>
@@ -21,7 +21,7 @@
                         <div class="card-body">
                             <div class="form-validation">
                                 <form class="needs-validation" novalidate=""
-                                    action="{{ route('students.update', $student) }}" method="post" enctype="multipart/form-data">
+                                    action="{{ route('admin.students.update', $student) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
 

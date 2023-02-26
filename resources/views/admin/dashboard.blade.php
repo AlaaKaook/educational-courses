@@ -1,5 +1,7 @@
 @extends('admin_layouts.admin_layout')
 
+@section('title' , 'Admin Home')
+
 @section('content')
 
 

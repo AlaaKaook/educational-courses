@@ -81,7 +81,7 @@ class StudentController extends Controller
         $student->save();
 
 
-        return redirect()->route('students.show' , $student)->with('status','Add Student Successfully');
+        return redirect()->route('admin.students.show' , $student)->with('status','Add Student Successfully');
     }
 
     /**
@@ -159,7 +159,7 @@ class StudentController extends Controller
         $student->user->type = "Student";
         $student->user->update();
 
-        return redirect()->route('students.show' , $student)->with('status','Update Student Successfully');
+        return redirect()->route('admin.students.show' , $student)->with('status','Update Student Successfully');
     }
 
     /**
@@ -173,6 +173,6 @@ class StudentController extends Controller
         $student->delete();
         $student->user->delete();
 
-        return redirect()->route('students.index')->with('status', 'Delete Student Successfully');
+        return redirect()->route('admin.students.index')->with('status', 'Delete Student Successfully');
     }
 }

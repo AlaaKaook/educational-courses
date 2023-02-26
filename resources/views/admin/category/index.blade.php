@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a href="{{ route('categories.index') }}">Categories</a></li>
+                <li class="breadcrumb-item active"><a href="{{ route('admin.categories.index') }}">Categories</a></li>
                 <li class="breadcrumb-item"><a href="javascript:void(0)">All Categories</a></li>
             </ol>
         </div>
@@ -35,7 +35,7 @@
                                     @foreach ($categories as $category)
                                             <tr class="text-center">
                                                 <th>{{ $category->id }}</th>
-                                                <td> <a href="{{ route('categories.show', $category) }}" class="text-primary">{{ $category->name }}</a></td>
+                                                <td> <a href="{{ route('admin.categories.show', $category) }}" class="text-primary">{{ $category->name }}</a></td>
 
                                                 @if (Str::length($category->description) >= 20)
                                                     <td>{{ Str::substr($category->description, 0, 20) }}...</td>
@@ -47,12 +47,12 @@
                                                     <div>
 
 
-                                                        <form action="{{ route('categories.destroy', $category) }}"
+                                                        <form action="{{ route('admin.categories.destroy', $category) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('delete')
 
-                                                            <a href="{{ route('categories.edit', $category) }}"
+                                                            <a href="{{ route('admin.categories.edit', $category) }}"
                                                                 class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                     class="fas fa-pencil-alt"></i></a>
 

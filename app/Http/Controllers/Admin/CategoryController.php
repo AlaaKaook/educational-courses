@@ -57,7 +57,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return redirect()->route('categories.show' , $category)->with('status','Add Category Successfully');
+        return redirect()->route('admin.categories.show' , $category)->with('status','Add Category Successfully');
     }
 
     /**
@@ -116,7 +116,7 @@ class CategoryController extends Controller
 
         $category->update();
 
-        return redirect()->route('categories.show' , $category)->with('status','Update Category Successfully');
+        return redirect()->route('admin.categories.show' , $category)->with('status','Update Category Successfully');
     }
 
     /**
@@ -129,6 +129,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()->route('categories.index')->with('status','Delete Category Successfully');
+        return redirect()->route('admin.categories.index')->with('status','Delete Category Successfully');
     }
 }

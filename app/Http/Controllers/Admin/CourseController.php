@@ -82,7 +82,7 @@ class CourseController extends Controller
         $course->save();
 
 
-        return redirect()->route('courses.show' , $course)->with('status','Add Course Successfully');
+        return redirect()->route('admin.courses.show' , $course)->with('status','Add Course Successfully');
     }
 
     /**
@@ -157,7 +157,7 @@ class CourseController extends Controller
         $course->description = $request->input('description');
         $course->update();
 
-        return redirect()->route('courses.show' , $course)->with('status','Update Course Successfully');
+        return redirect()->route('admin.courses.show' , $course)->with('status','Update Course Successfully');
 
 
     }
@@ -178,6 +178,6 @@ class CourseController extends Controller
 
         $course->delete();
 
-        return redirect()->route('courses.index')->with('status','Delete Course Successfully');
+        return redirect()->route('admin.courses.index')->with('status','Delete Course Successfully');
     }
 }

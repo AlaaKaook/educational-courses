@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('lessons.index') }}">Lessons</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.lessons.index') }}">Lessons</a></li>
                     <li class="breadcrumb-item"><a href="#">Create New Lesson</a></li>
                 </ol>
             </div>
@@ -21,7 +21,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
-                                <form class="needs-validation" novalidate="" action="{{ route('lessons_inweb.store') }}"
+                                <form class="needs-validation" novalidate="" action="{{ route('admin.lessons_inweb.store') }}"
                                     method="post" enctype="multipart/form-data">
                                     @csrf
 

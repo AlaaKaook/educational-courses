@@ -33,7 +33,7 @@
                                     </span> <strong class="text-muted md-change2"><h4>{{$category->description}}</h4> </strong></li>
 
                         </ul>
-                        <form action="{{ route('categories.index') }}" method="get">
+                        <form action="{{ route('admin.categories.index') }}" method="get">
 
                         <div class="card-footer border-0 mt-0">
                             <button class="btn btn-primary btn-lg btn-block">

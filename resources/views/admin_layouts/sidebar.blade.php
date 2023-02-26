@@ -9,7 +9,7 @@
 							<span class="nav-text">Dashboard</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="{{ route('dashboard') }}">Home</a></li>
+							<li><a href="{{ route('admin.dashboard') }}">Home</a></li>
 							{{-- <li><a href="index-2.html">Dashboard Dark</a></li>
 							<li><a href="project-page.html">Project</a></li>
 							<li><a href="contacts.html">Contacts</a></li>
@@ -25,8 +25,8 @@
 							<span class="nav-text">Students</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('students.index') }}">All Students</a></li>
-							<li><a href="{{ route('students.create') }}">Create New Student</a></li>
+                            <li><a href="{{ route('admin.students.index') }}">All Students</a></li>
+							<li><a href="{{ route('admin.students.create') }}">Create New Student</a></li>
                             {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                                 <ul aria-expanded="false">
                                     <li><a href="email-compose.html">Compose</a></li>
@@ -53,8 +53,8 @@
 							<span class="nav-text">Teachers</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('teachers.index') }}">All Teachers</a></li>
-                            <li><a href="{{ route('teachers.create') }}">Create New Teacher</a></li>
+                            <li><a href="{{ route('admin.teachers.index') }}">All Teachers</a></li>
+                            <li><a href="{{ route('admin.teachers.create') }}">Create New Teacher</a></li>
                             {{-- <li><a href="chart-chartjs.html">Chartjs</a></li>
                             <li><a href="chart-chartist.html">Chartist</a></li>
                             <li><a href="chart-sparkline.html">Sparkline</a></li>
@@ -66,8 +66,8 @@
 							<span class="nav-text">Courses</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('courses.index') }}">All Courses</a></li>
-                            <li><a href="{{ route('courses.create') }}">Create New Course</a></li>
+                            <li><a href="{{ route('admin.courses.index') }}">All Courses</a></li>
+                            <li><a href="{{ route('admin.courses.create') }}">Create New Course</a></li>
                             {{-- <li><a href="ui-badge.html">Badge</a></li>
                             <li><a href="ui-button.html">Button</a></li>
                             <li><a href="ui-modal.html">Modal</a></li>
@@ -89,9 +89,9 @@
 							<span class="nav-text">Lessons</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('lessons.index') }}">All Lessons</a></li>
-                            <li><a href="{{ route('create_lesson_youtube') }}">Create Lesson youtube</a></li>
-                            <li><a href="{{ route('create_inweb')}}">Create Lesson In Web</a></li>
+                            <li><a href="{{ route('admin.lessons.index') }}">All Lessons</a></li>
+                            <li><a href="{{ route('admin.create_lesson_youtube') }}">Create Lesson youtube</a></li>
+                            <li><a href="{{ route('admin.create_inweb')}}">Create Lesson In Web</a></li>
                             {{-- <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
                             <li><a href="uc-toastr.html">Toastr</a></li>
                             <li><a href="map-jqvmap.html">Jqv Map</a></li>
@@ -108,8 +108,8 @@
 							<span class="nav-text">Categories</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('categories.index') }}">All Categories</a></li>
-                            <li><a href="{{ route('categories.create') }}">Create New Category</a></li>
+                            <li><a href="{{ route('admin.categories.index') }}">All Categories</a></li>
+                            <li><a href="{{ route('admin.categories.create') }}">Create New Category</a></li>
                             {{-- <li><a href="form-ckeditor.html">CkEditor</a></li>
                             <li><a href="form-pickers.html">Pickers</a></li>
                             <li><a href="form-validation.html">Form Validate</a></li> --}}
@@ -120,8 +120,8 @@
 							<span class="nav-text">Sub Categories</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('subcategories.index') }}">All Sub Categories</a></li>
-                            <li><a href="{{ route('subcategories.create') }}">Create New Sub Categories</a></li>
+                            <li><a href="{{ route('admin.subcategories.index') }}">All Sub Categories</a></li>
+                            <li><a href="{{ route('admin.subcategories.create') }}">Create New Sub Categories</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
@@ -129,8 +129,8 @@
 							<span class="nav-text">Discounts</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('discounts.index') }}">All Discounts</a></li>
-                            <li><a href="{{ route('discounts.create') }}">Create New Discount</a></li>
+                            <li><a href="{{ route('admin.discounts.index') }}">All Discounts</a></li>
+                            <li><a href="{{ route('admin.discounts.create') }}">Create New Discount</a></li>
                             {{-- <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
                                 <ul aria-expanded="false">
                                     <li><a href="page-error-400.html">Error 400</a></li>
