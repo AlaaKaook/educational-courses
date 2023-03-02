@@ -32,7 +32,7 @@
                                                 <div class="col-lg-9">
                                                     <input type="text" name="title"
                                                         class="form-control @error('title') is-danger @enderror"
-                                                        id="validationfirstname" placeholder="Enter a First Name.."
+                                                        id="validationfirstname" placeholder="Enter a Title.."
                                                         required="" value="{{ old('title') }}">
                                                     <div class="invalid-feedback">
                                                         Please enter a Title.

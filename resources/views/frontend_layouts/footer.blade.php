@@ -55,9 +55,9 @@
                     <div class="footer_column_title">Menu</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="#">Home</a></li>
+                            <li class="footer_list_item"><a href="{{route('home.front') }}">Home</a></li>
                             <li class="footer_list_item"><a href="#">About Us</a></li>
-                            <li class="footer_list_item"><a href="courses.html">Courses</a></li>
+                            <li class="footer_list_item"><a href="{{ route('courses') }}">Courses</a></li>
                             <li class="footer_list_item"><a href="news.html">News</a></li>
                             <li class="footer_list_item"><a href="contact.html">Contact</a></li>
                         </ul>
@@ -85,23 +85,25 @@
                     <div class="footer_column_title">Contact</div>
                     <div class="footer_column_content">
                         <ul>
+                            @foreach ($settings as $setting)
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
                                     <img src="{{ asset('assets/frontend/images/placeholder.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                 </div>
-                                Blvd Libertad, 34 m05200 Arévalo
+                               {{ $setting->location }}
                             </li>
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
                                     <img src="{{ asset('assets/frontend/images/smartphone.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
                                 </div>
-                                0034 37483 2445 322
+                                {{ $setting->phone }}
                             </li>
                             <li class="footer_contact_item">
                                 <div class="footer_contact_icon">
                                     <img src="{{ asset('assets/frontend/images/envelope.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
-                                </div>hello@company.com
+                                </div>{{ $setting->email }}
                             </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

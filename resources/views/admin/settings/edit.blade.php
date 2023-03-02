@@ -82,6 +82,24 @@
                                             </div>
 
                                             <div class="mb-3 row">
+                                                <label class="col-lg-2 col-form-label" for="validationlogoname">Location<span
+                                                        class="text-danger">*</span>
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="location"
+                                                        class="form-control @error('location') is-danger @enderror"
+                                                        id="validationlogoname" placeholder="Your valid Location.."
+                                                        required=""  value="{{ $setting->location }}">
+                                                    <div class="invalid-feedback">
+                                                        Please enter a Location.
+                                                    </div>
+                                                    @error('location')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3 row">
                                                 <label class="col-lg-2 col-form-label" for="validationAbout">About
                                                     <span class="text-danger">*</span>
                                                 </label>

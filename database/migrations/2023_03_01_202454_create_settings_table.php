@@ -18,8 +18,9 @@ class CreateSettingsTable extends Migration
             $table->string('logo');
             $table->string('logo_name');
             $table->string('phone');
-             $table->string('email');
-            $table->string('search');
+            $table->string('email');
+            $table->string('location');
+            $table->longText('search');
             $table->longText('about');
             $table->timestamps();
         });

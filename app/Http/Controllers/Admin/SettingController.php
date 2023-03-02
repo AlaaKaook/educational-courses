@@ -70,6 +70,7 @@ class SettingController extends Controller
         $setting->phone = $request->input('phone');
         $setting->email = $request->input('email');
         $setting->logo_name = $request->input('logo_name');
+        $setting->location = $request->input('location');
         $setting->update();
 
         return redirect()->route('admin.settings.index')->with('status','Update Settings Successfully');

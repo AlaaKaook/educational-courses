@@ -23,6 +23,7 @@ class SettingSeeder extends Seeder
                 'phone' => '0999999999',
                 'about' => 'About Section',
                 'search' => 'Search Section',
+                'location' => 'Location Section',
 
             ],
 

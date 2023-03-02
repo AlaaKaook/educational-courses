@@ -5,8 +5,10 @@
 			<!-- Logo -->
 			<div class="logo_container">
 				<div class="logo">
-					<img src="{{ asset('assets/frontend/images/logo.png') }}" alt="">
-					<span>course</span>
+                    @foreach ($settings as $setting)
+					<img src="{{ asset('assets/upload/images/logo/' . $setting->logo) }}" alt="">
+					<span>{{$setting->logo_name}}</span>
+                    @endforeach
 				</div>
 			</div>
 
@@ -14,7 +16,7 @@
 			<nav class="main_nav_container">
 				<div class="main_nav">
 					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="#">home</a></li>
+						<li class="main_nav_item"><a href="{{ route('home.front') }}">home</a></li>
 						<li class="main_nav_item"><a href="#">about us</a></li>
 						<li class="main_nav_item"><a href="{{route('courses')}}">courses</a></li>
 						<li class="main_nav_item"><a href="elements.html">elements</a></li>
@@ -26,7 +28,7 @@
 		</div>
 		<div class="header_side d-flex flex-row justify-content-center align-items-center">
 			<img src="{{ asset('assets/frontend/images/phone-call.svg') }}" alt="Phone">
-			<span>+963 999999999</span>
+			<span>{{ $setting->phone }}</span>
 		</div>
 
 		<!-- Hamburger -->
