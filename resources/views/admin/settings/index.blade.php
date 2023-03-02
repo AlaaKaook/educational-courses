@@ -26,6 +26,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Logo</th>
+                                            <th>Logo Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Search</th>
@@ -37,7 +38,8 @@
                                         @foreach ($settings as $setting)
                                             <tr class="text-center">
                                                 <th>{{ $setting->id }}</th>
-                                                <td><img src="{{ asset('assets/upload/images/logo/' . $setting->logo) }}" alt="Logo" width="130px" height="40px"></td>
+                                                <td><img src="{{ asset('assets/upload/images/logo/' . $setting->logo) }}" alt="Logo" width="80px" height="40px"></td>
+                                                <td>{{ $setting->logo_name }}</td>
                                                 <td>{{ $setting->email }}</td>
                                                 <td>{{ $setting->phone }}</td>
 
@@ -57,19 +59,10 @@
                                                     <div>
 
 
-                                                        <form action="{{ route('admin.settings.destroy', $setting) }}"
-                                                            method="post">
-                                                            @csrf
-                                                            @method('delete')
-
                                                             <a href="{{ route('admin.settings.edit', $setting) }}"
                                                                 class="btn btn-primary shadow btn-xs sharp me-1"><i
                                                                     class="fas fa-pencil-alt"></i></a>
 
-                                                            <button type="submit"
-                                                                class="btn btn-danger shadow btn-xs sharp"><i
-                                                                    class="fa fa-trash"></i></button>
-                                                        </form>
 
                                                     </div>
                                                 </td>

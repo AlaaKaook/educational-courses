@@ -63,6 +63,23 @@
                                                 </div>
                                             </div>
 
+                                            <div class="mb-3 row">
+                                                <label class="col-lg-2 col-form-label" for="validationlogoname">Logo Name<span
+                                                        class="text-danger">*</span>
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="logo_name"
+                                                        class="form-control @error('logo_name') is-danger @enderror"
+                                                        id="validationlogoname" placeholder="Your valid LOGO Name.."
+                                                        required=""  value="{{ $setting->logo_name }}">
+                                                    <div class="invalid-feedback">
+                                                        Please enter a logo name.
+                                                    </div>
+                                                    @error('logo_name')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
 
                                             <div class="mb-3 row">
                                                 <label class="col-lg-2 col-form-label" for="validationAbout">About

@@ -69,7 +69,7 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
 
     Route::resource('sliders', AdminSliderController::class);
 
-    Route::resource('settings', AdminSettingController::class);
+    Route::resource('settings', AdminSettingController::class)->only('index' , 'update' , 'edit');
 });
 
     Auth::routes();

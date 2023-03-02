@@ -22,51 +22,6 @@ class SettingController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('admin.settings.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $request->validate([
-            'logo' => 'required',
-            'about' => 'required|min:10',
-            'search' => 'required|min:10',
-            'phone' => 'required|numeric|min:10',
-            'email' => 'required|email'
-        ]);
-
-        $setting = new Setting();
-
-        $logo=$request->file('logo');
-        $input['logoname'] = time(). '.' . $logo->getClientOriginalExtension();
-        $path = public_path('/assets/upload/images/logo');
-        $logo->move($path ,  $input['logoname']);
-        $setting->logo = $input['logoname'];
-
-        $setting->about = $request->input('about');
-        $setting->search = $request->input('search');
-        $setting->phone = $request->input('phone');
-        $setting->email = $request->input('email');
-        $setting->save();
-
-
-        return redirect()->route('admin.settings.index')->with('status','Add Settings Successfully');
-
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Setting  $setting
@@ -86,12 +41,12 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        // dd($request);
         $request->validate([
             'about' => 'required|min:10',
             'search' => 'required',
             'phone' => 'required|numeric|min:10',
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'logo_name' => 'required'
         ]);
 
 
@@ -114,21 +69,10 @@ class SettingController extends Controller
         $setting->search = $request->input('search');
         $setting->phone = $request->input('phone');
         $setting->email = $request->input('email');
+        $setting->logo_name = $request->input('logo_name');
         $setting->update();
 
         return redirect()->route('admin.settings.index')->with('status','Update Settings Successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Setting $setting)
-    {
-        $setting->delete();
-
-        return redirect()->route('admin.settings.index')->with('status', 'Delete Setting Successfully');
-    }
 }
