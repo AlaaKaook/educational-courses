@@ -7,6 +7,7 @@ use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
+
 class SettingController extends Controller
 {
     /**
@@ -43,6 +44,7 @@ class SettingController extends Controller
             'about' => 'required|min:10',
             'search' => 'required|min:10',
             'phone' => 'required|numeric|min:10',
+            'email' => 'required|email'
         ]);
 
         $setting = new Setting();
@@ -56,6 +58,7 @@ class SettingController extends Controller
         $setting->about = $request->input('about');
         $setting->search = $request->input('search');
         $setting->phone = $request->input('phone');
+        $setting->email = $request->input('email');
         $setting->save();
 
 
@@ -83,11 +86,12 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
+        // dd($request);
         $request->validate([
-            'logo' => 'required',
             'about' => 'required|min:10',
             'search' => 'required',
             'phone' => 'required|numeric|min:10',
+            'email' => 'required|email'
         ]);
 
 
@@ -109,6 +113,7 @@ class SettingController extends Controller
         $setting->about = $request->input('about');
         $setting->search = $request->input('search');
         $setting->phone = $request->input('phone');
+        $setting->email = $request->input('email');
         $setting->update();
 
         return redirect()->route('admin.settings.index')->with('status','Update Settings Successfully');

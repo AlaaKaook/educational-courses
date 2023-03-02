@@ -46,6 +46,25 @@
                                             </div>
 
                                             <div class="mb-3 row">
+                                                <label class="col-lg-2 col-form-label" for="validationEmail">Email <span
+                                                        class="text-danger">*</span>
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="email"
+                                                        class="form-control @error('email') is-danger @enderror"
+                                                        id="validationEmail" placeholder="Your valid email.."
+                                                        required="" value="{{ $setting->email }}">
+                                                    <div class="invalid-feedback">
+                                                        Please enter a Email.
+                                                    </div>
+                                                    @error('email')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                    @enderror
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-3 row">
                                                 <label class="col-lg-2 col-form-label" for="validationAbout">About
                                                     <span class="text-danger">*</span>
                                                 </label>

@@ -26,6 +26,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Logo</th>
+                                            <th>Email</th>
                                             <th>Phone</th>
                                             <th>Search</th>
                                             <th>About</th>
@@ -37,6 +38,7 @@
                                             <tr class="text-center">
                                                 <th>{{ $setting->id }}</th>
                                                 <td><img src="{{ asset('assets/upload/images/logo/' . $setting->logo) }}" alt="Logo" width="130px" height="40px"></td>
+                                                <td>{{ $setting->email }}</td>
                                                 <td>{{ $setting->phone }}</td>
 
                                                 @if (Str::length($setting->search) >= 10)
