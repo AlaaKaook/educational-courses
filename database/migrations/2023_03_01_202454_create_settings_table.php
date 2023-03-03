@@ -22,6 +22,7 @@ class CreateSettingsTable extends Migration
             $table->string('location');
             $table->longText('search');
             $table->longText('about');
+            $table->string('about_image');
             $table->timestamps();
         });
     }

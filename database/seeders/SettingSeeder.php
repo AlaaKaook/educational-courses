@@ -22,6 +22,7 @@ class SettingSeeder extends Seeder
                 'email' => 'excample@gmail.com',
                 'phone' => '0999999999',
                 'about' => 'About Section',
+                'about_image' => 'about image',
                 'search' => 'Search Section',
                 'location' => 'Location Section',
 

@@ -65,6 +65,24 @@ class SettingController extends Controller
             $setting->logo = $input['logoname'];
         }
 
+        if($request->hasFile('about_image'))
+        {
+            $path = public_path('/assets/upload/images/about_img'.$setting->about_image);
+
+            if(File::exists($path))
+            {
+                File::delete($path);
+            }
+            $about_image = $request->file('about_image');
+            $input['about_image_name'] = time(). '.' . $about_image->getClientOriginalExtension();
+            $path = public_path('/assets/upload/images/about_img');
+            $about_image->move($path ,  $input['about_image_name']);
+            $setting->about_image = $input['about_image_name'];
+        }
+
+
+
+
         $setting->about = $request->input('about');
         $setting->search = $request->input('search');
         $setting->phone = $request->input('phone');

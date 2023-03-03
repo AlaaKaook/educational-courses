@@ -23,6 +23,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/courses_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/courses_responsive.css') }}">
 
+    <!-- link About Us -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/news_styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/news_responsive.css') }}">
+
 </head>
 
 <body>
@@ -53,7 +57,7 @@
     <script src="{{ asset('assets/frontend/plugins/scrollTo/jquery.scrollTo.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/plugins/easing/easing.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/custom.js') }}"></script>
-
+    <script src="{{ asset('assets/frontend/js/news_custom.js') }}"></script>
 </body>
 
 </html>

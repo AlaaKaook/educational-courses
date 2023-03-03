@@ -58,7 +58,7 @@ body
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #a5a5a5;
+	color: black;
 }
 div
 {
@@ -139,14 +139,14 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
 h6::selection
 {
-	
+
 }
 ::-webkit-input-placeholder
 {
@@ -160,14 +160,14 @@ h6::selection
 	font-weight: 500 !important;
 	color: #a5a5a5 !important;
 }
-::-moz-placeholder /* Firefox 19+ */ 
+::-moz-placeholder /* Firefox 19+ */
 {
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #a5a5a5 !important;
-} 
+}
 :-ms-input-placeholder
-{ 
+{
 	font-size: 14px !important;
 	font-weight: 500 !important;
 	color: #a5a5a5 !important;
@@ -292,7 +292,7 @@ section
 	transition: all 200ms ease;
 }
 .header.scrolled
-{	
+{
 	top: 15px;
 }
 .header.scrolled .header_content::before
@@ -375,7 +375,7 @@ section
 }
 .main_nav_item a:hover
 {
-	color: #ffb606;
+	color: #4CA1AF;
 }
 
 /*********************************
@@ -386,7 +386,7 @@ section
 {
 	width: 279px;
 	height: 100%;
-	background: #ffb606;
+	background: #4CA1AF;
 }
 .header_side img
 {
@@ -428,7 +428,7 @@ section
 }
 .hamburger_container:hover i
 {
-	color: #ffb606;
+	color: #4CA1AF;
 }
 
 /*********************************
@@ -506,7 +506,7 @@ section
 }
 .menu_item a:hover
 {
-	color: #ffb606;
+	color: #4CA1AF;
 }
 .menu_close_container
 {
@@ -553,7 +553,7 @@ section
 .menu_close_container:hover .menu_close,
 .menu_close_container:hover .menu_close::after
 {
-	background: #ffb606;
+	background: #4CA1AF;
 }
 
 /*********************************
@@ -591,7 +591,7 @@ section
 }
 .menu_social_item a i:hover
 {
-	color: #ffb606;
+	color: #4CA1AF;
 }
 .menu_container.active .menu_social_container
 {
@@ -668,7 +668,7 @@ section
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
-	background: #ffb606;
+	background: #4CA1AF;
 	padding-top: 24px;
 	padding-bottom: 18px;
 	padding-left: 39px;
@@ -717,7 +717,7 @@ section
 	width: 55px;
 	height: 4px;
 	content: '';
-	background: #ffb606;
+	background: #4CA1AF;
 }
 
 /*********************************
@@ -780,7 +780,7 @@ section
 {
 	width: 68px;
 	height: 68px;
-	background: #ffb606;
+	background: #4CA1AF;
 }
 .news_post_date div:first-child
 {
@@ -852,7 +852,7 @@ section
 {
 	width: 188px;
 	height: 53px;
-	background: #ffb606;
+	background: #4CA1AF;
 	margin-top: 18px;
 }
 .news_post_button a
@@ -882,11 +882,11 @@ section
 }
 .news_page_nav ul li.active
 {
-	background: #ffb606;
+	background: #4CA1AF;
 }
 .news_page_nav ul li:hover
 {
-	background: #ffb606;
+	background: #4CA1AF;
 }
 .news_page_nav ul li a
 {
@@ -923,6 +923,12 @@ section
 	line-height: 1;
 	font-weight: 700;
 }
+.sidebar_section_title h1
+{
+	color: #4CA1AF;
+	line-height: 1;
+	font-weight: 700;
+}
 .sidebar_list
 {
 	margin-top: 28px;
@@ -931,8 +937,9 @@ section
 {
 	padding-top: 13px;
 	padding-bottom: 13px;
-	border-bottom: solid 2px #d2d2d2;
+	border-bottom: solid 2px #4CA1AF;
 }
+
 .sidebar_list_item a
 {
 	font-size: 14px;
@@ -941,7 +948,7 @@ section
 }
 .sidebar_list_item a:hover
 {
-	color: #ffb606;
+	color: #4CA1AF;
 }
 .latest_posts
 {
@@ -1014,7 +1021,7 @@ section
 .tag
 {
 	height: 40px;
-	background: #ffb606;
+	background: #4CA1AF;
 	margin-right: 12px;
 	margin-bottom: 10px;
 }
@@ -1069,14 +1076,14 @@ section
 }
 .newsletter_email:focus
 {
-	outline: solid 2px #ffb606;
+	outline: solid 2px #4CA1AF;
 }
 .newsletter_submit_btn
 {
 	width: 164px;
 	height: 42px;
 	border: none;
-	background: #ffb606;
+	background: #4CA1AF;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 500;
@@ -1091,7 +1098,7 @@ section
 11.2 Footer Content
 *********************************/
 
-.footer_content 
+.footer_content
 {
 	padding-top: 80px;
 	padding-bottom: 83px;
@@ -1138,7 +1145,7 @@ section
 }
 .footer_list_item a:hover
 {
-	color: #ffb606;
+	color: #4CA1AF;
 }
 .footer_contact_item
 {
@@ -1179,7 +1186,7 @@ section
 }
 .footer_social .menu_social_item a i:hover
 {
-	color: #ffb606;
+	color: #4CA1AF;
 }
 .footer_social .menu_social_item:last-child
 {

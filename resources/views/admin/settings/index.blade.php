@@ -27,6 +27,7 @@
                                             <th>#</th>
                                             <th>Logo</th>
                                             <th>Logo Name</th>
+                                            <th>Location</th>
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Search</th>
@@ -40,6 +41,7 @@
                                                 <th>{{ $setting->id }}</th>
                                                 <td><img src="{{ asset('assets/upload/images/logo/' . $setting->logo) }}" alt="Logo" width="80px" height="40px"></td>
                                                 <td>{{ $setting->logo_name }}</td>
+                                                <td>{{ $setting->location }}</td>
                                                 <td>{{ $setting->email }}</td>
                                                 <td>{{ $setting->phone }}</td>
 

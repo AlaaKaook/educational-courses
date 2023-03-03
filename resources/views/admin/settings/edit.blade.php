@@ -1,14 +1,14 @@
 @extends('admin_layouts.admin_layout')
 
-@section('title', ' Update Student')
+@section('title', ' Update Settings')
 
 @section('content')
     <div class="content-body">
         <div class="container-fluid">
             <div class="row page-titles">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active"><a href="{{ route('admin.students.index') }}">Students</a></li>
-                    <li class="breadcrumb-item"><a href="#">Update Student Informations</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.settings.index') }}">Settings</a></li>
+                    <li class="breadcrumb-item"><a href="#">Update Settings Informations</a></li>
                 </ol>
             </div>
             <!-- row -->
@@ -16,7 +16,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Update Student</h4>
+                            <h4 class="card-title">Update Settings</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-validation">
@@ -137,6 +137,24 @@
                                                 </label>
                                                 <div class="col-lg-9 form-file">
                                                     <input type="file" name="logo"
+                                                        class="form-file-input form-control">
+                                                </div>
+                                                <span class="input-group-text">Upload</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="row">
+                                            <div class="input-group mb-3 mt-4">
+                                                <label class="col-lg-2 col-form-label" for="validationdescription">Select
+                                                    image About
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <div class="col-lg-9 form-file">
+                                                    <input type="file" name="about_image"
                                                         class="form-file-input form-control">
                                                 </div>
                                                 <span class="input-group-text">Upload</span>

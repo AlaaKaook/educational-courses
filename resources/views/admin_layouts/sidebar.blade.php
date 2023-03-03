@@ -21,7 +21,9 @@
                     </li>
 
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                            <i class="fas fa-info-circle"></i>
+                        {{-- Add color to icon --}}
+                            {{-- <i class="fas fa-user-graduate" style='color: blue'></i> --}}
+                            <i class="fas fa-user-graduate"></i>
                             <span class="nav-text">Students</span>
                         </a>
                         <ul aria-expanded="false">
@@ -49,7 +51,7 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-chalkboard-teacher"></i>
                             <span class="nav-text">Teachers</span>
                         </a>
                         <ul aria-expanded="false">
@@ -62,30 +64,16 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                            <i class="fab fa-bootstrap"></i>
+                            <i class="fas fa-laptop-code"></i>
                             <span class="nav-text">Courses</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('admin.courses.index') }}">All Courses</a></li>
                             <li><a href="{{ route('admin.courses.create') }}">Create New Course</a></li>
-                            {{-- <li><a href="ui-badge.html">Badge</a></li>
-                            <li><a href="ui-button.html">Button</a></li>
-                            <li><a href="ui-modal.html">Modal</a></li>
-                            <li><a href="ui-button-group.html">Button Group</a></li>
-                            <li><a href="ui-list-group.html">List Group</a></li>
-                            <li><a href="ui-card.html">Cards</a></li>
-                            <li><a href="ui-carousel.html">Carousel</a></li>
-                            <li><a href="ui-dropdown.html">Dropdown</a></li>
-                            <li><a href="ui-popover.html">Popover</a></li>
-                            <li><a href="ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="ui-tab.html">Tab</a></li>
-                            <li><a href="ui-typography.html">Typography</a></li>
-                            <li><a href="ui-pagination.html">Pagination</a></li>
-                            <li><a href="ui-grid.html">Grid</a></li> --}}
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                            <i class="fas fa-heart"></i>
+                            <i class="fa fa-book"></i>
                             <span class="nav-text">Lessons</span>
                         </a>
                         <ul aria-expanded="false">
@@ -125,7 +113,7 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                            <i class="fas fa-table"></i>
+                            <i class="fas fa-clone"></i>
                             <span class="nav-text">Sliders</span>
                         </a>
                         <ul aria-expanded="false">
@@ -134,7 +122,7 @@
                         </ul>
                     </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                            <i class="fas fa-clone"></i>
+                            <i class="fas fa-angle-double-down"></i>
                             <span class="nav-text">Discounts</span>
                         </a>
                         <ul aria-expanded="false">
@@ -155,7 +143,7 @@
                     </li>
 
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                            <i class="fas fa-clone"></i>
+                            <i class="fas fa-shield-alt"></i>
                             <span class="nav-text">Settings</span>
                         </a>
                         <ul aria-expanded="false">
