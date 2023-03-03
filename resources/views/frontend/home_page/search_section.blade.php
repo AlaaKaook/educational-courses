@@ -13,7 +13,8 @@
                         <div class="register_content text-center">
                             <h1 class="register_title">{{ $setting->search }}</h1>
 
-                            <p class="register_text">Find any Course</p>
+                            {{-- <p class="register_text">Find any Course</p> --}}
+                            <p class="register_text">  </p>
 
                         </div>
                     </div>
