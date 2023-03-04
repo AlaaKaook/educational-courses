@@ -17,11 +17,11 @@
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="{{ route('home.front') }}">home</a></li>
-						<li class="main_nav_item"><a href="{{route('about')}}">about us</a></li>
 						<li class="main_nav_item"><a href="{{route('courses')}}">courses</a></li>
+						<li class="main_nav_item"><a href="{{route('about')}}">about us</a></li>
+						<li class="main_nav_item"><a href="contact.html">contact</a></li>
 						<li class="main_nav_item"><a href="elements.html">elements</a></li>
 						<li class="main_nav_item"><a href="news.html">news</a></li>
-						<li class="main_nav_item"><a href="contact.html">contact</a></li>
 					</ul>
 				</div>
 			</nav>

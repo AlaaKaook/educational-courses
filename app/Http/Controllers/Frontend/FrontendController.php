@@ -15,7 +15,8 @@ class FrontendController extends Controller
     {
         $sliders = Slider::latest()->limit(6)->get();
         $students = Student::latest()->limit(6)->get();
-        $courses = Course::latest()->limit(3)->get();
+        // $courses = Course::latest()->limit(6)->orderby('id')->get();
+        $courses = Course::all();
         return view('frontend.home_page.home' , ['courses' => $courses , 'students' => $students , 'sliders' => $sliders]);
     }
 

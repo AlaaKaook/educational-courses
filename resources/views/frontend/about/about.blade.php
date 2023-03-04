@@ -9,7 +9,7 @@
     <div class="home">
         <div class="home_background_container prlx_parent">
             <div class="home_background prlx"
-                style="background-image:url({{ asset('assets/frontend/images/news_background.jpg') }})"></div>
+                style="background-image:url({{ asset('assets/frontend/images/contact_background.jpg') }})"></div>
             {{-- <div class="home_background prlx" style="background-image:url(images/news_background.jpg)"></div> --}}
         </div>
         <div class="home_content">
@@ -39,9 +39,9 @@
                         <div class="news_posts">
                             <!-- News Post -->
                             <div class="news_post">
-                                <div class="news_post_image">
-                                    <img src="{{ asset('assets/upload/images/about_img/' . $setting->about_image) }}" alt="About US Image">
-                                </div>
+                                {{-- <div class="news_post_image"> --}}
+                                    <img width="730px" height="385px" src="{{ asset('assets/upload/images/about_img/' . $setting->about_image) }}" alt="About US Image">
+                                {{-- </div> --}}
                             </div>
                         </div>
 

@@ -18,9 +18,13 @@
                 <div class="col text-center">
                     <div class="newsletter_form_container mx-auto">
                         <form action="post">
-                            <div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
-                                <input id="newsletter_email" class="newsletter_email" type="email" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                                <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Subscribe</button>
+                            <div
+                                class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
+                                <input id="newsletter_email" class="newsletter_email" type="email"
+                                    placeholder="Email Address" required="required"
+                                    data-error="Valid email is required.">
+                                <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300"
+                                    value="Submit">Subscribe</button>
                             </div>
                         </form>
                     </div>
@@ -40,12 +44,14 @@
                     <!-- Logo -->
                     <div class="logo_container">
                         <div class="logo">
-                            <img src="{{ asset('assets/frontend/images/logo.png') }}" alt="">
+                            <img src="{{ asset('assets/frontend/images/logo2.png') }}" alt="">
                             <span>course</span>
                         </div>
                     </div>
 
-                    <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+                    <p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae
+                        tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.
+                    </p>
 
                 </div>
 
@@ -55,9 +61,9 @@
                     <div class="footer_column_title">Menu</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="{{route('home.front') }}">Home</a></li>
-                            <li class="footer_list_item"><a href="#">About Us</a></li>
+                            <li class="footer_list_item"><a href="{{ route('home.front') }}">Home</a></li>
                             <li class="footer_list_item"><a href="{{ route('courses') }}">Courses</a></li>
+                            <li class="footer_list_item"><a href="{{ route('about') }}">About Us</a></li>
                             <li class="footer_list_item"><a href="news.html">News</a></li>
                             <li class="footer_list_item"><a href="contact.html">Contact</a></li>
                         </ul>
@@ -86,23 +92,26 @@
                     <div class="footer_column_content">
                         <ul>
                             @foreach ($settings as $setting)
-                            <li class="footer_contact_item">
-                                <div class="footer_contact_icon">
-                                    <img src="{{ asset('assets/frontend/images/placeholder.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
-                                </div>
-                               {{ $setting->location }}
-                            </li>
-                            <li class="footer_contact_item">
-                                <div class="footer_contact_icon">
-                                    <img src="{{ asset('assets/frontend/images/smartphone.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
-                                </div>
-                                {{ $setting->phone }}
-                            </li>
-                            <li class="footer_contact_item">
-                                <div class="footer_contact_icon">
-                                    <img src="{{ asset('assets/frontend/images/envelope.svg') }}" alt="https://www.flaticon.com/authors/lucy-g">
-                                </div>{{ $setting->email }}
-                            </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="{{ asset('assets/frontend/images/location3.jfif') }}"
+                                            alt="location icon">
+                                    </div>
+                                    {{ $setting->location }}
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="{{ asset('assets/frontend/images/phone.jfif') }}"
+                                            alt="phone icon">
+                                    </div>
+                                    {{ $setting->phone }}
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="{{ asset('assets/frontend/images/message.jfif') }}"
+                                            alt="message icon">
+                                    </div>{{ $setting->email }}
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -115,11 +124,13 @@
 
         <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
             <div class="footer_copyright">
-                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+                <span>
+                    Created By <i class="fa fa-heart" aria-hidden="true"></i>
+                    <a href="#" target="_blank">Alaa Kaook</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </span>
             </div>
-            <div class="footer_social ml-sm-auto">
+            {{-- <div class="footer_social ml-sm-auto">
                 <ul class="menu_social">
                     <li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
                     <li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
@@ -127,7 +138,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
 
     </div>

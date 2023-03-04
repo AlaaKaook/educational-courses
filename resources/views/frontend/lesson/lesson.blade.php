@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col">
                     <div class="section_title text-center">
-                        <h1>Lessons {{ $course->name }} Course</h1>
+                        <h1>Lessons {{ $course->name }} </h1>
                         {{-- <h1> Lessons </h1> --}}
                     </div>
                 </div>
@@ -48,7 +48,7 @@
 
 
                             <div class="card-body text-center">
-                                <div class="card-title"><a href="courses.html">{{ $lesson->name }}</a></div>
+                                <div class="card-title"><a href="#">{{ $lesson->name }}</a></div>
 
                                 @if (Str::length($lesson->description) >= 25)
                                     <div class="card-text">{{ Str::substr($lesson->description, 0, 25) }}....</div>

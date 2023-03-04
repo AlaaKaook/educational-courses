@@ -55,7 +55,9 @@
                                 <div class="course_author_name">{{ $course->teacher->fname }} {{ $course->teacher->lname }}
                                 </div>
                                 <div class="course_price d-flex flex-column align-items-center justify-content-center">
-                                    <span>${{ $course->cost }}</span></div>
+                                    {{-- <span>${{ $course->cost }}</span> --}}
+                                    <span>$ 0 </span>
+                                </div>
                             </div>
                         </div>
                     </div>
