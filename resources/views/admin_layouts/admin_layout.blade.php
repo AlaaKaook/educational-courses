@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- PAGE TITLE HERE -->
-    <title>  @yield('title')  </title>
+    <title> @yield('title') </title>
 
     <!-- FAVICONS ICON -->
     <link rel="shortcut icon" type="image/png" href="{{ asset('assets/dashboard/images/favicon.png') }}">
@@ -149,16 +149,59 @@
     <script src="{{ asset('assets/dashboard/vendor/pickadate/picker.time.js') }}"></script>
     <script src="{{ asset('assets/dashboard/vendor/pickadate/picker.date.js') }}"></script>
 
-     <!-- Pickdate -->
-     <script src="{{ asset('assets/dashboard/js/plugins-init/pickadate-init.js') }}"></script>
+    <!-- Pickdate -->
+    <script src="{{ asset('assets/dashboard/js/plugins-init/pickadate-init.js') }}"></script>
 
-     <script src="{{ asset('assets/dashboard/vendor/jquery-nice-select/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/vendor/jquery-nice-select/js/jquery.nice-select.min.js') }}"></script>
 
-     <script src="{{ asset('assets/dashboard/js/custom.min.js') }}"></script>
-     <script src="{{ asset('assets/dashboard/js/dlabnav-init.js') }}"></script>
-     <script src="{{ asset('assets/dashboard/js/demo.js') }}"></script>
-     <script src="{{ asset('assets/dashboard/js/styleSwitcher.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/custom.min.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/dlabnav-init.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/demo.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/styleSwitcher.js') }}"></script>
 
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if (session('send_mail'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 12000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: '{{ session('send_mail') }}'
+            })
+        </script>
+    @endif
+
+    @if (session('status'))
+        <script>
+            Swal.fire(
+                'successfully',
+                '{{ session('status') }}',
+                'success',
+            );
+        </script>
+    @endif
+
+    @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'ERROR',
+                text: '{{ session('error') }}',
+            })
+        </script>
+    @endif
 
 </body>
 

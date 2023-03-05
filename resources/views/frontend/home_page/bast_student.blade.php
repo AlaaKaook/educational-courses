@@ -4,7 +4,7 @@
     <!-- <div class="testimonials_background" style="background-image:url(images/testimonials_background.jpg)"></div> -->
     <div class="testimonials_background_container prlx_parent">
         <div class="testimonials_background prlx"
-            style="background-image:url({{ asset('assets/frontend/images/testimonials_background.jpg') }})"></div>
+            style="background-image:url({{ asset('assets/frontend/images/course_1.jpg') }})"></div>
     </div>
     <div class="container">
 

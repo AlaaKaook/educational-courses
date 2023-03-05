@@ -11,8 +11,10 @@ use App\Http\Controllers\Admin\DiscountController as AdminDiscountController;
 use App\Http\Controllers\Admin\LessonController as AdminLessonController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
+use App\Http\Controllers\Admin\MessageController as AdminMessageController;
 use App\Http\Controllers\Frontend\CourseController;
 use App\Http\Controllers\Frontend\LessonController;
+use App\Http\Controllers\Frontend\ContactController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,6 +38,10 @@ Route::get('home/front', [FrontendController::class , 'index'])->name('home.fron
 Route::get('courses', [CourseController::class , 'index'])->name('courses');
 
 Route::get('about', [FrontendController::class , 'about'])->name('about');
+
+Route::get('contact', [ContactController::class , 'contact'])->name('contact');
+
+Route::post('send_email', [ContactController::class, 'send_email'])->name('contact.send_email');
 
 Route::get('course/lessons/{course}', [LessonController::class , 'index'])->name('lessons');
 
@@ -70,6 +76,16 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
     Route::resource('discounts', AdminDiscountController::class)->only('index' , 'create' , 'store' , 'destroy');
 
     Route::resource('sliders', AdminSliderController::class);
+
+    Route::resource('messages', AdminMessageController::class)->only('index' , 'show' , 'destroy');
+
+    Route::get('messages/form/{message}', [AdminMessageController::class, 'form_message_replay'])->name('form.message.replay');
+
+    Route::post('messages/replay/{message}', [AdminMessageController::class, 'message_replay'])->name('message.replay');
+
+    Route::get('replay', [AdminMessageController::class, 'messages_admin'])->name('message_admin.replay');
+
+    // Route::get('messages/ff', [AdminMessageController::class, 'messages_admin'])->name('message_admin.replay');
 
     Route::resource('settings', AdminSettingController::class)->only('index' , 'update' , 'edit');
 });
