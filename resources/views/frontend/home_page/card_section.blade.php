@@ -30,7 +30,7 @@
                         <img src="{{ asset('assets/frontend/images/professor.svg') }}" class="svg" alt="">
                         <div class="hero_box_content">
                             <h2 class="hero_box_title">Our Teachers</h2>
-                            <a href="teachers.html" class="hero_box_link">view more</a>
+                            <a href="{{ route('teachers') }}" class="hero_box_link">view more</a>
                         </div>
                     </div>
                 </div>

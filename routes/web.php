@@ -37,6 +37,8 @@ Route::get('home/front', [FrontendController::class , 'index'])->name('home.fron
 
 Route::get('courses', [CourseController::class , 'index'])->name('courses');
 
+Route::get('teachers', [FrontendController::class , 'show_teachers'])->name('teachers');
+
 Route::get('about', [FrontendController::class , 'about'])->name('about');
 
 Route::get('contact', [ContactController::class , 'contact'])->name('contact');

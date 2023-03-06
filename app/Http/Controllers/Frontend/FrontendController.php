@@ -7,6 +7,7 @@ use App\Models\About;
 use App\Models\Course;
 use App\Models\Slider;
 use App\Models\Student;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 use PHPUnit\Framework\Constraint\Count;
 use PHPUnit\Framework\MockObject\Builder\Stub;
@@ -26,6 +27,12 @@ class FrontendController extends Controller
      public function about()
     {
         return view('frontend.about.about');
+    }
+
+    public function show_teachers()
+    {
+        $teachers = Teacher::all();
+        return view('frontend.teacher.show_teacher' , ['teachers' => $teachers]);
     }
 
 }

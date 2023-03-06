@@ -47,7 +47,7 @@
                 <i></i>
             </div>
 
-            <div class="display_radio">
+            {{-- <div class="display_radio">
                 <input type="radio" name="type" value="student" class="@error('type') is-invalid @enderror" checked>
                 <span>Student</span>
                 <i></i>
@@ -57,15 +57,9 @@
                 <input type="radio" name="type" value="teacher" class="@error('type') is-invalid @enderror">
                 <span>Teacher</span>
                 <i></i>
-            </div>
+            </div> --}}
+
             <input type="submit" value="Register">
-
-
-
-
-
-
-
 
         </form>
 
