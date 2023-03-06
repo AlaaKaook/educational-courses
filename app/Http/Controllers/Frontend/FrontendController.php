@@ -22,7 +22,7 @@ class FrontendController extends Controller
         // $courses = Course::latest()->limit(6)->orderby('id')->get();
         $courses = Course::all();
         // $students_count = Student::all()->count();
-        return view('frontend.home_page.home' , ['courses' => $courses , 'students' => $students , 'sliders' => $sliders]);
+        return view('frontend.pages.home' , ['courses' => $courses , 'students' => $students , 'sliders' => $sliders]);
     }
 
      public function about()
