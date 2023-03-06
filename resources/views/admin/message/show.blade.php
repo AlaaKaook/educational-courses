@@ -24,7 +24,7 @@
                                     class="img-fluid rounded-circle" alt="message img">
                             </div>
                             <h3 class="mt-3 mb-1 text-white">{{ $message->name }}</h3>
-                            <p class="text-white mb-0">Form : {{ $message->email }}</p>
+                            <p class="text-white mb-0">Form : {{ $message->from_email }}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                             {{-- <li class="list-group-item d-flex justify-content-between"><span class="mb-0 mx-5 mt-2">

@@ -31,6 +31,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/contact_styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/contact_responsive.css') }}">
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/elements_styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/styles/elements_responsive.css') }}">
+
 </head>
 
 <body>
@@ -63,30 +66,34 @@
     <script src="{{ asset('assets/frontend/js/custom.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/news_custom.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/contact_custom.js') }}"></script>
+    <script src="{{ asset('assets/frontend/plugins/progressbar/progressbar.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/elements_custom.js') }}"></script>
 
-     <!-- Sweet Alert -->
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-     @if (session('send_mail'))
-     <script>
-         const Toast = Swal.mixin({
-             toast: true,
-             position: 'top-end',
-             showConfirmButton: false,
-             timer: 6000,
-             timerProgressBar: true,
-             didOpen: (toast) => {
-                 toast.addEventListener('mouseenter', Swal.stopTimer)
-                 toast.addEventListener('mouseleave', Swal.resumeTimer)
-             }
-         })
 
-         Toast.fire({
-             icon: 'success',
-             title: '{{ session('send_mail') }}'
-         })
-     </script>
- @endif
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if (session('send_mail'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 6000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: '{{ session('send_mail') }}'
+            })
+        </script>
+    @endif
 
 </body>
 

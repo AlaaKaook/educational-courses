@@ -8,6 +8,8 @@ use App\Models\Course;
 use App\Models\Slider;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use PHPUnit\Framework\Constraint\Count;
+use PHPUnit\Framework\MockObject\Builder\Stub;
 
 class FrontendController extends Controller
 {
@@ -17,6 +19,7 @@ class FrontendController extends Controller
         $students = Student::latest()->limit(6)->get();
         // $courses = Course::latest()->limit(6)->orderby('id')->get();
         $courses = Course::all();
+        // $students_count = Student::all()->count();
         return view('frontend.home_page.home' , ['courses' => $courses , 'students' => $students , 'sliders' => $sliders]);
     }
 

@@ -12,6 +12,8 @@
 
 @include('frontend.home_page.search_section')
 
+@include('frontend.home_page.counter_section')
+
 @include('frontend.home_page.service_section')
 
 @include('frontend.home_page.bast_student')
