@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Course;
+use App\Models\Lesson;
 use App\Models\Slider;
 use App\Models\Student;
 use App\Models\Teacher;
@@ -33,6 +34,24 @@ class FrontendController extends Controller
     {
         $teachers = Teacher::all();
         return view('frontend.teacher.show_teacher' , ['teachers' => $teachers]);
+    }
+
+    public function result_search(Request $request)
+    {
+        $courses = Course::latest();
+        $lessons = Lesson::latest();
+
+
+         //Search
+        if ($request->filled('search')) {
+            $courses->where('name', 'like', "%$request->search%")->orWhere('description', 'like', "%$request->search%")->orderBy('created_at', 'desc')->get();
+            $lessons->where('name', 'like', "%$request->search%")->orWhere('description', 'like', "%$request->search%")->orderBy('created_at', 'desc')->get();
+        }
+
+        $courses =  $courses->paginate(15);
+        $lessons =  $lessons->paginate(15);
+
+        return view('frontend.pages.result_search', ['courses' => $courses , 'lessons'=>$lessons]);
     }
 
 }

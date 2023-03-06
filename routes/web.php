@@ -47,6 +47,7 @@ Route::post('send_email', [ContactController::class, 'send_email'])->name('conta
 
 Route::get('course/lessons/{course}', [LessonController::class , 'index'])->name('lessons');
 
+Route::get('result_search', [FrontendController::class , 'result_search'])->name('result_search');
 
 
 Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
