@@ -12,9 +12,11 @@ use App\Http\Controllers\Admin\LessonController as AdminLessonController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\SettingController as AdminSettingController;
 use App\Http\Controllers\Admin\MessageController as AdminMessageController;
+use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Frontend\CourseController;
 use App\Http\Controllers\Frontend\LessonController;
 use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\GalleryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,26 +35,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home/front', [FrontendController::class , 'index'])->name('home.front');
+Route::get('home/front', [FrontendController::class, 'index'])->name('home.front');
 
-Route::get('courses', [CourseController::class , 'index'])->name('courses');
+Route::get('courses', [CourseController::class, 'index'])->name('courses');
 
-Route::get('teachers', [FrontendController::class , 'show_teachers'])->name('teachers');
+Route::get('teachers', [FrontendController::class, 'show_teachers'])->name('teachers');
 
-Route::get('about', [FrontendController::class , 'about'])->name('about');
+Route::get('about', [FrontendController::class, 'about'])->name('about');
 
-Route::get('contact', [ContactController::class , 'contact'])->name('contact');
+Route::get('contact', [ContactController::class, 'contact'])->name('contact');
 
 Route::post('send_email', [ContactController::class, 'send_email'])->name('contact.send_email');
 
-Route::get('course/lessons/{course}', [LessonController::class , 'index'])->name('lessons');
+Route::get('course/lessons/{course}', [LessonController::class, 'index'])->name('lessons');
 
-Route::get('result_search', [FrontendController::class , 'result_search'])->name('result_search');
+Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
+
+Route::get('result_search', [FrontendController::class, 'result_search'])->name('result_search');
 
 
-Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
-    Route::get('dashboard', [AdminDashboardController::class , 'index'])->name('dashboard');
+    Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('students', AdminStudentController::class);
 
@@ -64,7 +68,7 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
 
     Route::resource('courses', AdminCourseController::class);
 
-    Route::resource('lessons', AdminLessonController::class)->except('create' , 'store');
+    Route::resource('lessons', AdminLessonController::class)->except('create', 'store');
 
     Route::get('lesson/create/youtube', [AdminLessonController::class, 'create_youtube'])->name('create_lesson_youtube');
 
@@ -76,11 +80,11 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
 
     Route::put('lessons/{lesson}/web', [AdminLessonController::class, 'update_inweb'])->name('update_inweb');
 
-    Route::resource('discounts', AdminDiscountController::class)->only('index' , 'create' , 'store' , 'destroy');
+    Route::resource('discounts', AdminDiscountController::class)->only('index', 'create', 'store', 'destroy');
 
     Route::resource('sliders', AdminSliderController::class);
 
-    Route::resource('messages', AdminMessageController::class)->only('index' , 'show' , 'destroy');
+    Route::resource('messages', AdminMessageController::class)->only('index', 'show', 'destroy');
 
     Route::get('messages/form/{message}', [AdminMessageController::class, 'form_message_replay'])->name('form.message.replay');
 
@@ -90,9 +94,15 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function () {
 
     // Route::get('messages/ff', [AdminMessageController::class, 'messages_admin'])->name('message_admin.replay');
 
-    Route::resource('settings', AdminSettingController::class)->only('index' , 'update' , 'edit');
+    Route::resource('settings', AdminSettingController::class)->only('index', 'update', 'edit');
+
+    Route::resource('galleries', AdminGalleryController::class)->only('index' , 'edit' , 'update' , 'destroy');
+    
+    Route::get('form/uploade/images', [AdminGalleryController::class, 'create'])->name('form.upload.images');
+
+    Route::post('uploade/images', [AdminGalleryController::class, 'store'])->name('upload.images');
 });
 
-    Auth::routes();
+Auth::routes();
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

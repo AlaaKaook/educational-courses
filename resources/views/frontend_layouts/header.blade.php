@@ -19,7 +19,7 @@
 						<li class="main_nav_item"><a href="{{ route('home.front') }}">home</a></li>
 						<li class="main_nav_item"><a href="{{route('courses')}}">courses</a></li>
 						<li class="main_nav_item"><a href="{{ route('teachers') }}">Teachers</a></li>
-						<li class="main_nav_item"><a href="news.html">Gallery</a></li>
+						<li class="main_nav_item"><a href="{{ route('gallery') }}">Gallery</a></li>
 						<li class="main_nav_item"><a href="{{route('about')}}">about us</a></li>
 						<li class="main_nav_item"><a href="{{route('contact')}}">contact</a></li>
 					</ul>

@@ -197,7 +197,7 @@
         <script>
             Swal.fire({
                 icon: 'error',
-                title: 'ERROR',
+                title: 'Delete',
                 text: '{{ session('error') }}',
             })
         </script>
