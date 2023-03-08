@@ -95,6 +95,26 @@
         </script>
     @endif
 
+    @if (session('status'))
+        <script>
+            Swal.fire(
+                'successfully',
+                '{{ session('status') }}',
+                'success',
+            );
+        </script>
+    @endif
+
+    @if (session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Delete',
+                text: '{{ session('error') }}',
+            })
+        </script>
+    @endif
+
 </body>
 
 </html>

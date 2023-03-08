@@ -53,8 +53,10 @@ Route::get('gallery', [GalleryController::class, 'index'])->name('gallery');
 
 Route::get('result_search', [FrontendController::class, 'result_search'])->name('result_search');
 
+Route::get('subscribe', [FrontendController::class , 'subscribe'])->name('subscribe');
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.' , 'middleware' => 'auth' , 'middleware' => 'IsAdmin'], function () {
 
     Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
@@ -97,7 +99,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('settings', AdminSettingController::class)->only('index', 'update', 'edit');
 
     Route::resource('galleries', AdminGalleryController::class)->only('index' , 'edit' , 'update' , 'destroy');
-    
+
     Route::get('form/uploade/images', [AdminGalleryController::class, 'create'])->name('form.upload.images');
 
     Route::post('uploade/images', [AdminGalleryController::class, 'store'])->name('upload.images');
