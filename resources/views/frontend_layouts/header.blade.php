@@ -50,12 +50,12 @@
 		<div class="menu_inner menu_mm">
 			<div class="menu menu_mm">
 				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="#">Home</a></li>
-					<li class="menu_item menu_mm"><a href="#">About us</a></li>
-					<li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
-					<li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+					<li class="menu_item menu_mm"><a href="{{ route('home.front') }}">Home</a></li>
+					<li class="menu_item menu_mm"><a href="{{route('courses')}}">Courses</a></li>
+					<li class="menu_item menu_mm"><a href="{{ route('teachers') }}">Teachers</a></li>
+					<li class="menu_item menu_mm"><a href="{{route('about')}}">About us</a></li>
+					<li class="menu_item menu_mm"><a href="{{ route('gallery') }}">Gallery</a></li>
+					<li class="menu_item menu_mm"><a href="{{route('contact')}}">Contact</a></li>
 				</ul>
 
 				<!-- Menu Social -->
@@ -70,7 +70,7 @@
 					</ul>
 				</div>
 
-				<div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
+				<div class="menu_copyright menu_mm">Developed By Alaa Kaook</div>
 			</div>
 
 		</div>

@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col text-center">
                     <div class="newsletter_form_container mx-auto">
-                        <form action="post">
+                        <form method="get" action="{{route('subscribe')}}">
                             <div
                                 class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-center">
                                 <input id="newsletter_email" class="newsletter_email" type="email"
@@ -64,8 +64,8 @@
                             <li class="footer_list_item"><a href="{{ route('home.front') }}">Home</a></li>
                             <li class="footer_list_item"><a href="{{ route('courses') }}">Courses</a></li>
                             <li class="footer_list_item"><a href="{{ route('about') }}">About Us</a></li>
-                            <li class="footer_list_item"><a href="news.html">News</a></li>
-                            <li class="footer_list_item"><a href="contact.html">Contact</a></li>
+                            <li class="footer_list_item"><a href="{{route('teachers')}}">Teachers</a></li>
+                            <li class="footer_list_item"><a href="c{{route('contact')}}">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -73,14 +73,14 @@
                 <!-- Footer Column - Usefull Links -->
 
                 <div class="col-lg-3 footer_col">
-                    <div class="footer_column_title">Usefull Links</div>
+                    <div class="footer_column_title">courses</div>
                     <div class="footer_column_content">
                         <ul>
-                            <li class="footer_list_item"><a href="#">Testimonials</a></li>
-                            <li class="footer_list_item"><a href="#">FAQ</a></li>
-                            <li class="footer_list_item"><a href="#">Community</a></li>
-                            <li class="footer_list_item"><a href="#">Campus Pictures</a></li>
-                            <li class="footer_list_item"><a href="#">Tuitions</a></li>
+                            @foreach ($courses as $course)
+                            @if ($loop->index < 5)
+                            <li class="footer_list_item"><a href="{{route('lessons' , $course)}}">{{ $course->name }}</a></li>
+                            @endif
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -125,8 +125,8 @@
         <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
             <div class="footer_copyright">
                 <span>
-                    Created By <i class="fa fa-heart" aria-hidden="true"></i>
-                    <a href="#" target="_blank">Alaa Kaook</a>
+                    Developed By <i class="fa fa-heart" aria-hidden="true"></i>
+                    <a href="#">Alaa Kaook</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </span>
             </div>
