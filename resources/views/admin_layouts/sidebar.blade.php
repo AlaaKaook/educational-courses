@@ -121,6 +121,16 @@
                             <li><a href="{{ route('admin.sliders.create') }}">Create New Slider</a></li>
                         </ul>
                     </li>
+
+                    <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                        <i class="fa fa-image"></i>
+                        <span class="nav-text">Gallery</span>
+                    </a>
+                    <ul aria-expanded="false">
+                        <li><a href="{{ route('admin.galleries.index') }}">All Image</a></li>
+                        <li><a href="{{ route('admin.form.upload.images') }}">Create New image</a></li>
+                    </ul>
+                </li>
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                             <i class="fas fa-angle-double-down"></i>
                             <span class="nav-text">Discounts</span>

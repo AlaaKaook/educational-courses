@@ -31,11 +31,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('home/front', [FrontendController::class, 'index'])->name('home.front');
+Route::get('/', [FrontendController::class, 'index'])->name('home.front');
 
 Route::get('courses', [CourseController::class, 'index'])->name('courses');
 
@@ -107,4 +107,4 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.' , 'middleware' => 'auth' , '
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

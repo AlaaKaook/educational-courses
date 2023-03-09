@@ -18,11 +18,16 @@ class FrontendController extends Controller
     public function index()
     {
         $sliders = Slider::latest()->limit(6)->get();
-        $students = Student::latest()->limit(6)->get();
+        $teachers = Teacher::latest()->limit(6)->get();
         // $courses = Course::latest()->limit(6)->orderby('id')->get();
         $courses = Course::all();
         // $students_count = Student::all()->count();
-        return view('frontend.pages.home' , ['courses' => $courses , 'students' => $students , 'sliders' => $sliders]);
+        return view('frontend.pages.home' , ['courses' => $courses , 'teachers' => $teachers , 'sliders' => $sliders]);
+    }
+
+    public function subscribe()
+    {
+        return redirect()->route('home.front')->with('status' , 'Thank you, news will be sent exclusively');
     }
 
      public function about()

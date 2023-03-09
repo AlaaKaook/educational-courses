@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title text-center">
-                    <h1>Bast Students</h1>
+                    <h1>Bast teachers</h1>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                     <!-- Testimonials Slider -->
                     <div class="owl-carousel owl-theme testimonials_slider">
 
-                        @foreach ($students as $student)
+                        @foreach ($teachers as $teacher)
                             <!-- Testimonials Item -->
                             <div class="owl-item">
                                 <div class="testimonials_item text-center">
@@ -36,11 +36,11 @@
                                         fermentum.</p>
                                     <div class="testimonial_user">
                                         <div class="testimonial_image mx-auto">
-                                            <img src="{{ asset('assets/upload/images/student_img/' . $student->image) }}"
-                                                alt="Student Image" width="98px" height="98px">
+                                            <img src="{{ asset('assets/upload/images/teacher_img/' . $teacher->image) }}"
+                                                alt="teacher Image" width="98px" height="98px">
                                         </div>
-                                        <div class="testimonial_name">{{ $student->fname }} {{ $student->lname }}</div>
-                                        <div class="testimonial_title">Bast Student</div>
+                                        <div class="testimonial_name">{{ $teacher->fname }} {{ $teacher->lname }}</div>
+                                        <div class="testimonial_title">Bast Teachers</div>
                                     </div>
                                 </div>
                             </div>

@@ -16,6 +16,6 @@
 
 @include('frontend.pages.service_section')
 
-@include('frontend.pages.bast_student')
+@include('frontend.pages.bast_teacher')
 
 @endsection

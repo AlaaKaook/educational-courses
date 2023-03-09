@@ -12,10 +12,8 @@
                     <div class="register_section d-flex flex-column align-items-center justify-content-center">
                         <div class="register_content text-center">
                             <h1 class="register_title">{{ $setting->search }}</h1>
-
-                            {{-- <p class="register_text">Find any Course</p> --}}
-                            <p class="register_text"> </p>
-
+                            <p class="register_text">Find any Course</p>
+                            <div class="button button_1 register_button mx-auto trans_200"><a href="{{ route('register') }}">register now</a></div>
                         </div>
                     </div>
                 @endforeach

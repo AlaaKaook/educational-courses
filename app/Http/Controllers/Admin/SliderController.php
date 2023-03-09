@@ -92,7 +92,7 @@ class SliderController extends Controller
     public function update(Request $request, Slider $slider)
     {
         $request->validate([
-            'image' => 'required|mimes:jpeg,png,bmp,gif|max: 2000',
+            // 'image' => 'required|mimes:jpeg,png,bmp,gif|max: 2000',
             'title'  => 'required',
             'active' => 'required',
         ]);
